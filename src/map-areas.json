@@ -1,0 +1,14 @@
+[
+    {
+      "id": "dutchRoom",
+      "title": "dutchRoom",
+      "shape": "rect",
+      "name": "dutchRoom",
+      
+      "strokeColor": "black",
+    
+      "coords": [
+        724,1263,293,703
+      ]
+    }
+]

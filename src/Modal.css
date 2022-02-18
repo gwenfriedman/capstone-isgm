@@ -1,0 +1,55 @@
+
+
+.modal{
+    position: fixed;
+    background-color: black;
+    color: white;
+    width: 800px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    display: flex;
+}
+
+img {
+    height: 100%;
+    width: 50%;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.info {
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.closeButton {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 350px;
+    margin-top: -10px !important;
+    border-radius: 0;
+}
+
+.note {
+    margin-top: -20px;
+}
+
+.value {
+    background-color: #AD1E1E;
+    height: 30px;
+    width: 300px;
+    border-radius: 4px;
+    margin-left: -100px;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.value h4 {
+    padding-top: 5px;
+}

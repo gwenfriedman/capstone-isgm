@@ -1,3 +1,48 @@
+
+@font-face {
+  font-family: 'Typewriter';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/JMH\ Typewriter.ttf'); /* IE9 Compat Modes */
+  src: local('Typewriter'), local('Typewriter'),
+       url('/public/fonts/JMH\ Typewriter.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Typewriter';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/public/fonts/JMH\ Typewriter-Bold.ttf'); /* IE9 Compat Modes */
+  src: local('Typewriter'), local('Typewriter'),
+       url('/public/fonts/JMH\ Typewriter-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Typewriter';
+  font-style: normal;
+  font-weight: thin;
+  src: url('/public/fonts/JMH\ Typewriter-Thin.ttf'); /* IE9 Compat Modes */
+  src: local('Typewriter'), local('Typewriter'),
+       url('/public/fonts/JMH\ Typewriter-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Typewriter';
+  font-style: normal;
+  font-weight: black;
+  src: url('/public/fonts/JMH\ Typewriter-Black.ttf'); /* IE9 Compat Modes */
+  src: local('Typewriter'), local('Typewriter'),
+       url('/public/fonts/JMH\ Typewriter-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Typewriter';
+}
+
+button {
+  font-family: 'Typewriter';
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +80,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.childImage {
+  position: absolute;
+}
+
+.caption-block {
+  margin-top: -20px;
+  background-color: white;
+  color: black;
+  font-size: 30 !important;
+  height: 50px;
+  width: 350px;
+  outline: auto;
+  padding-left: 10px;
+  z-index: 1;
+  padding-top: 10px;
+  box-shadow: -10px 10px #7B7B7B;
+  border-radius: 6px;
+}
+
+.speaker {
+  outline: auto;
+  font-size: 30 !important;
+  color: black;
+  background-color: white;
+  width: 160px;
+  height: 25px;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin-left: 15px;
+  z-index: 5;
+  font-weight: bold !important;
+}
+
+.captions {
+  margin-left: 20px;
 }

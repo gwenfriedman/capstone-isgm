@@ -4,6 +4,8 @@ import audio1 from './audio/test-audio.m4a'
 
 import 'animate.css/animate.min.css';
 
+import './App.css';
+
 
 function Audio() {
     let captions;
@@ -17,21 +19,22 @@ function Audio() {
     };
   
     return (
-      <div>
+      <div className={"captions"} style={{height: 500}}>
           <button onClick={handlerClick}>Play</button>
         <button onClick={handlerClickP}>Pause</button>
 
-         <AudioCaptions src={audio1} ref={ (el) => { captions = el; } }>
-          <Caption start="0">
-              <h2> I'm calling from the gardner museum </h2>
+        <h4 className={"speaker"}> Chief of Security </h4>
+         <AudioCaptions className={"caption-block"} src={audio1} autoPlay={true} ref={ (el) => { captions = el; } }>
+          <Caption start="0" end="4.2">
+             I'm calling from the gardner museum
           </Caption>
 
           <Caption start="2.5" noDisplay>
-              <h2> we’ve got big trouble </h2>
+              we’ve got big trouble
           </Caption>
 
           <Caption start="4.2" noDisplay>
-              <h2> we’ve got big trouble! </h2>
+              we’ve got big trouble!
           </Caption>
         </AudioCaptions>
       </div>
