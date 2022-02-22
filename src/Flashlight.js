@@ -16,7 +16,7 @@ function Flashlight(){
 
         <ReactFlashlight>
           <div>
-            <img style={{height: "100vh", width: "100vw"}} src={tunnelImg}/>
+            <img style={{height: "100vh", width: "100vw"}} src={tunnelImg} alt="guard in tunnel"/>
           </div>
         </ReactFlashlight>
     )
