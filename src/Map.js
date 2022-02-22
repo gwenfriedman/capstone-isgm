@@ -1,6 +1,6 @@
 import React from 'react';
 import map from './images/map.png'
-import maptext from './images/maptext.png'
+import mapText from './images/mapText.png'
 
 import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
@@ -47,7 +47,7 @@ function Map(){
             </div>
 
             <img 
-              src={maptext} 
+              src={mapText} 
               alt="text for map" 
               width={window.innerWidth} 
               style={{position:"relative", top: 0, left: 0, zIndex: 2, pointerEvents:'none'}}
