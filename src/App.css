@@ -100,16 +100,20 @@ button {
   font-size: 30 !important;
   height: 50px;
   width: 350px;
-  outline: auto;
+  /* outline: auto; */
   padding-left: 10px;
   z-index: 1;
   padding-top: 10px;
   box-shadow: -10px 10px #7B7B7B;
   border-radius: 6px;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: 0;
 }
 
 .speaker {
-  outline: auto;
+  /* outline: auto; */
   font-size: 30 !important;
   color: black;
   background-color: white;
@@ -120,8 +124,64 @@ button {
   margin-left: 15px;
   z-index: 5;
   font-weight: bold !important;
+  border-radius: 6px;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: 0;
 }
 
 .captions {
   margin-left: 20px;
+}
+
+.mapButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.captionButton {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+  border-radius: 50%;
+  margin-top: 55px;
+}
+
+.caption-container {
+  display: flex;
+}
+
+.captionImage {
+  height: 25px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.screenSizeWarning {
+  height: 100vh;
+  background-color: black;
+  width: 100vw;
+  position: absolute;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .screenSizeWarning {
+      display: none;
+  }
+}
+
+.styledButton {
+  margin-top: 30px;
+  height: 40px;
+  width: 200px;
+  box-shadow: -6px 6px #7B7B7B;
+  border-radius: 6px;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: 0;
 }

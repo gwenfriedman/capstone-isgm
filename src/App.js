@@ -37,11 +37,17 @@ function App() {
 
   return (
     <div style={{backgroundColor: "black", color: "white"}}>
+
+      {/* Screen size warning */}
+      <div className={"screenSizeWarning"}>
+        <h1> Please switch to a device with a larger screen </h1>
+      </div>
+
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname} forceRefresh={true}>
           <Route element={<Wrapper />}>
-            
-            {/* on leave pause audio?? */}
+
+            {/* TODO: on leave pause audio?? */}
             <Route path="/" element={<Home />}/>
             <Route exact path="/flashlight" element={<Flashlight />}/>
             <Route exact path="/audio" element={<Audio />}/>

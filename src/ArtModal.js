@@ -7,7 +7,7 @@ import './Modal.css';
 const ArtModal = props => {
     return(
         <div className={"modal"}> 
-            <img src={seascape} />
+            <img className='modal-image' src={seascape} />
 
             <div className='info'>
                 <img src={x} className='closeButton' onClick={() => props.closeFunction(false)}/>

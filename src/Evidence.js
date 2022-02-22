@@ -3,6 +3,9 @@ import bgImg from './images/evidence-bg.png'
 import ImageMapper from 'react-img-mapper';
 import myData from './dutch1-areas.json';
 import ArtModal from './ArtModal';
+import { useNavigate } from "react-router-dom";
+import x from './images/x.png'
+
 
 import './App.css';
 
@@ -24,6 +27,8 @@ function Evidence(){
           setShowFirstModal(false);
         }
         };
+
+      let navigate = useNavigate();
 
     return(
         <div style={{width: '100%'}}>
@@ -50,6 +55,8 @@ function Evidence(){
           <ImageMapper src={bgImg} width={window.innerWidth} 
           map={MAP} responsive={true} parentWidth={window.innerWidth} 
           onClick={(area) => openModal(area)}/>
+
+        <img src={x} className='mapButton' onClick={() => navigate("/map")}/>
         </div>
 
     )
