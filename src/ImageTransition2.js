@@ -6,7 +6,7 @@ function ImageTransition(){
     return(
         <div>
             <Link to="/transition" style={{position: "absolute", backgroundColor: "white"}}> back </Link>
-            <img style={{height: "100vh", width: "100vw"}} src={dutchRoom}/>
+            <img style={{height: "100vh", width: "100vw"}} src={dutchRoom} alt="dutch room"/>
         </div>
     )
 }

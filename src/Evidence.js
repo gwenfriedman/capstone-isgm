@@ -19,10 +19,10 @@ function Evidence(){
       const [showFirstModal, setShowFirstModal] = useState(false);
       const [showSecondModal, setShowSecondModal] = useState(false);
       const openModal = ( area ) => {
-        if(area.title == "frame1") {
+        if(area.title === "frame1") {
           setShowFirstModal(true);
           setShowSecondModal(false);
-        } else if(area.title == "frame2") {
+        } else if(area.title === "frame2") {
           setShowSecondModal(true);
           setShowFirstModal(false);
         }
@@ -56,7 +56,7 @@ function Evidence(){
           map={MAP} responsive={true} parentWidth={window.innerWidth} 
           onClick={(area) => openModal(area)}/>
 
-        <img src={x} className='mapButton' onClick={() => navigate("/map")}/>
+        <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")}/>
         </div>
 
     )

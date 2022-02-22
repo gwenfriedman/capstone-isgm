@@ -46,7 +46,7 @@ function Audio() {
           </div>
 
           <button className="captionButton" onClick={toggleAudio}>
-            <img className="captionImage" src=
+            <img alt="play/pause" className="captionImage" src=
           {isPlaying ? 
             pause : 
             play }

@@ -7,7 +7,7 @@ function ImageTransition(){
     return(
         <div>
             <Link to="/transition2" style={{position: "absolute", backgroundColor: "white"}}> next </Link>
-            <img style={{height: "100vh", width: "100vw"}} src={tunnelImg}/>
+            <img style={{height: "100vh", width: "100vw"}} src={tunnelImg} alt="guard in tunnel"/>
             
         </div>
     )

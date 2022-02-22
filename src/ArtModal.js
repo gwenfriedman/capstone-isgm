@@ -10,7 +10,7 @@ const ArtModal = props => {
             <img className='modal-image' src={seascape} />
 
             <div className='info'>
-                <img src={x} className='closeButton' onClick={() => props.closeFunction(false)}/>
+                <img src={x} alt='painting' className='closeButton' onClick={() => props.closeFunction(false)}/>
                 <h2 style={{width:"250px", marginBottom:"40px"}}> {props.title} </h2>
 
                 {props.info.map(i => (
