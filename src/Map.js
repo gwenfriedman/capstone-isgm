@@ -1,6 +1,6 @@
 import React from 'react';
 import map from './images/map.png'
-import mapText from './images/maptext.png'
+// import maptext from './images/maptext.png'
 
 import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
@@ -46,7 +46,7 @@ function Map(){
             lineWidth={0}/>
             </div>
 
-            <img src={mapText} width={window.innerWidth} style={{position:"relative", top: 0, left: 0, zIndex: 2, pointerEvents:'none'}}/>
+            {/* <img src={maptext} width={window.innerWidth} style={{position:"relative", top: 0, left: 0, zIndex: 2, pointerEvents:'none'}}/> */}
 
         <button onClick={() => {localStorage.clear()}}> Clear </button>
 
