@@ -5,7 +5,7 @@
       "shape": "poly",
       "name": "1",
       "fillColor": "#eab54d4d",
-      "strokeColor": "black",
+      "strokeColor": "#ffffff00",
       "coords": [
         1076,840,974,869,1170,919,1255,888
       ],
@@ -34,7 +34,7 @@
         "shape": "poly",
         "name": "2",
         "fillColor": "#eab54d4d",
-        "strokeColor": "black",
+        "strokeColor": "#ffffff00",
         "coords": [
             801,1136,
             573,1227,
@@ -62,6 +62,24 @@
           ],
           [
             661,1357
+          ]
+        ]
+      }, 
+      {
+        "id": "3",
+        "title": "seascape",
+        "shape": "rect",
+        "name": "seascape",
+        "fillColor": "#ffffff00",
+        "coords": [
+          1270,417,1401,558
+        ],
+        "polygon": [
+          [
+            1270,417
+          ],
+          [
+            1401,558
           ]
         ]
       }
