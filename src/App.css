@@ -99,7 +99,7 @@ button {
   color: black;
   font-size: 30 !important;
   height: 50px;
-  width: 350px;
+  width: 500px;
   /* outline: auto; */
   padding-left: 10px;
   z-index: 1;
@@ -166,6 +166,7 @@ button {
   width: 100vw;
   position: absolute;
   padding: 30px;
+  z-index: 1000;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -184,4 +185,8 @@ button {
   outline-style: solid;
   outline-color: black;
   outline-offset: 0;
+}
+
+.overlay {
+  opacity: 0.5;
 }

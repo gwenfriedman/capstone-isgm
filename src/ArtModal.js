@@ -1,13 +1,11 @@
 import React from 'react'
-import seascape from './images/art/seascape.jpg'
 import x from './images/x.png'
-
 import './Modal.css';
 
 const ArtModal = props => {
     return(
         <div className={"modal"}> 
-            <img className='modal-image' src={seascape} alt='seascape'/>
+            <img className='modal-image' src={props.image} alt='seascape'/>
 
             <div className='info'>
                 <img src={x} alt='painting' className='closeButton' onClick={() => props.closeFunction(false)}/>

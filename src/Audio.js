@@ -7,6 +7,7 @@ import pause from './images/pause.png'
 import 'animate.css/animate.min.css';
 
 import './App.css';
+import QuestionBlock from './QuestionBlock';
 
 function Audio() {
     let captions;
@@ -30,7 +31,7 @@ function Audio() {
         <div className={"caption-container"}>
           <div>
           <h4 className={"speaker"}> Chief of Security </h4>
-          <AudioCaptions className={"caption-block"} src={audio1} autoPlay={true} ref={ (el) => { captions = el; } }>
+          <AudioCaptions className={"caption-block"} src={audio1} autoPlay ref={ (el) => { captions = el; } }>
             <Caption start="0" end="4.2">
               I'm calling from the gardner museum
             </Caption>
@@ -55,6 +56,15 @@ function Audio() {
         </div>
 
         <button className='styledButton'> Enter the crime scene </button>
+
+        <QuestionBlock title={"What would you like to ask the FBI agent?"} 
+          questions={[
+            "What do you think the thieves are doing with the paintings?", 
+            "How would you profile the thieves?", 
+            "Is there anything unusual about this robbery?",
+            "Why this museum? Why now?"
+          ]}
+        />
       </div>
     );
   }

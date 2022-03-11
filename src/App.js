@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <div style={{backgroundColor: "black", color: "white"}}>
+    <div style={{color: "white"}}>
 
       {/* Screen size warning */}
       <div className={"screenSizeWarning"}>
