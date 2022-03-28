@@ -1,0 +1,103 @@
+[
+    {
+      "id": "1",
+      "title": "etching-frame",
+      "shape": "poly",
+      "name": "etching-frame",
+      "fillColor": "#eab54d4d",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        2451,1663,2406,1773,2416,1805,2637,1802,2644,1767,2603,1659
+      ],
+      "polygon": [
+        [
+            2451,1663
+        ],
+        [
+            2406,1773
+        ],
+        [
+            2416,1805
+        ],
+        [
+            2637,1802 
+        ],
+        [
+            2644,1767
+        ],
+        [
+            2603,1659
+        ]
+      ]
+    },
+
+    {
+        "id": "2",
+        "title": "self-portrait-frame",
+        "shape": "poly",
+        "name": "self-portrait-frame",
+        "fillColor": "#eab54d4d",
+        "strokeColor": "#ffffff00",
+        "coords": [
+            3182,1485,2859,1757,2862,1802,3413,1881,3581,1590,3578,1526
+        ],
+        "polygon": [
+          [
+            3182,1485
+          ],
+          [
+            2859,1757
+          ],
+          [
+            2862,1802
+          ],
+          [
+            3413,1881 
+          ],
+          [
+            3581,1590
+          ],
+          [
+            3578,1526
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "title": "etching",
+        "shape": "rect",
+        "name": "etching",
+        "fillColor": "#ffffff00",
+        "strokeColor": "#ffffff00",
+        "coords": [
+            1358,891,1494,1134
+        ],
+        "polygon": [
+          [
+            1358,891
+          ],
+          [
+            1494,1134
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "title": "self-portrait",
+        "shape": "rect",
+        "name": "self-portrait",
+        "fillColor": "#ffffff00",
+        "strokeColor": "#ffffff00",
+        "coords": [
+            826,13,1529,516
+        ],
+        "polygon": [
+          [
+            826,13
+          ],
+          [
+            1529,516
+          ]
+        ]
+      }
+]

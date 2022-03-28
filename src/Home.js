@@ -14,10 +14,7 @@ function Home(){
                    <Link to="/audio"> Audio </Link> 
                 </li>
                 <li>
-                    <Link to="/evidence"> Evidence </Link>
-                </li>
-                <li>
-                    <Link to="/transition"> Image Transition </Link>
+                    <Link to="/dutchroom1"> Dutch Room </Link>
                 </li>
                 <li>
                     <Link to="/map"> Map </Link>
