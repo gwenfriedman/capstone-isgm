@@ -6,15 +6,17 @@ import Dutchroom1 from './DutchRoom1';
 import Dutchroom2 from './DutchRoom2';
 import Dutchroom3 from './DutchRoom3';
 import Dutchroom4 from './DutchRoom4';
+import ShortGallery1 from './ShortGallery1';
+import ShortGallery2 from './ShortGallery2';
 import Map from './Map'
-import {Route, Routes, useLocation, Outlet} from "react-router-dom";
+import { Route, Routes, useLocation, Outlet } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
 
   const location = useLocation();
 
- const Wrapper = () => {
+  const Wrapper = () => {
     return (
       <motion.div
         initial="initial"
@@ -37,7 +39,7 @@ function App() {
   };
 
   return (
-    <div style={{color: "white"}}>
+    <div style={{ color: "white" }}>
 
       {/* Screen size warning */}
       <div className={"screenSizeWarning"}>
@@ -49,14 +51,16 @@ function App() {
           <Route element={<Wrapper />}>
 
             {/* TODO: on leave pause audio?? */}
-            <Route path="/" element={<Home />}/>
-            <Route exact path="/flashlight" element={<Flashlight />}/>
-            <Route exact path="/audio" element={<Audio />}/>
-            <Route exact path="/dutchroom1" element={<Dutchroom1 />}/>
-            <Route exact path="/dutchroom2" element={<Dutchroom2 />}/>
-            <Route exact path="/dutchroom3" element={<Dutchroom3 />}/>
-            <Route exact path="/dutchroom4" element={<Dutchroom4 />}/>
-            <Route exact path="/map" element={<Map />}/>
+            <Route path="/" element={<Home />} />
+            <Route exact path="/flashlight" element={<Flashlight />} />
+            <Route exact path="/audio" element={<Audio />} />
+            <Route exact path="/dutchroom1" element={<Dutchroom1 />} />
+            <Route exact path="/dutchroom2" element={<Dutchroom2 />} />
+            <Route exact path="/dutchroom3" element={<Dutchroom3 />} />
+            <Route exact path="/dutchroom4" element={<Dutchroom4 />} />
+            <Route exact path="/shortgallery1" element={<ShortGallery1 />} />
+            <Route exact path="/shortgallery2" element={<ShortGallery2 />} />
+            <Route exact path="/map" element={<Map />} />
           </Route>
         </Routes>
       </AnimatePresence>
