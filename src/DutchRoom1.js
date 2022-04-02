@@ -6,7 +6,7 @@ import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import sea from './images/seascape-in-scene.png';
-import seascape from './images/art/seascape.jpg';
+import selfPortrait from './images/art/self-portrait-not-stolen.jpeg';
 import etching from './images/art/etching.jpg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
@@ -86,13 +86,12 @@ function DutchRoom1() {
 
 
       {showSelfPortraitModal ?
-        //   TODO: replace info
         <ArtModal
-          title={"The Storm on the Sea of Galilee"}
-          info={["Oil on Canvas - 1633 - Rembrandt", "160 x 128 cm (63 x 50 3/8 in.)"]}
-          noteworthy={["Brutally cut from frame", "Rembrandt's only seascape"]}
-          value={"Value: $100 million"}
-          image={seascape}
+          title={"Self-portrait"}
+          info={["Oil on oak panel - 1629 - Rembrandt", "89.7 x 73.5 cm (35 5/16 x 28 15/16 in.)"]}
+          noteworthy={["This was not stolen. The thieves removed it from the wall, but ultimately left it behind. The thieves may have considered it too large to transport, potentially because it was painted on wood, not more durable canvas."]}
+          value={"Value: Unknown"}
+          image={selfPortrait}
           closeFunction={setShowSelfPortraitModal} />
         : null}
 

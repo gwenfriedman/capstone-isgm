@@ -66,7 +66,7 @@ function ShortGallery2() {
                 <ArtModal
                     title={"Eagle Finial: Insignia of the First Regiment of Grenadiers of Foot of Napoleon's Imperial Guard"}
                     info={["Gilded bronze - 1813-1814 - Pierre-Philippe Thomire & Antoine-Denis Chaudet", "25.4 cm (10 in.)"]}
-                    noteworthy={["??"]}
+                    noteworthy={["The decorative top of a flagpole to which was attached a silk flag from Napoleon’s First Regiment of Imperial Guard."]}
                     value={"Value: Unknown"}
                     image={finial}
                     closeFunction={setShowFinialModal} />
