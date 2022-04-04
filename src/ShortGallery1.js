@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import shortgallery1 from './images/shortgallery1.png';
+import shortgallery1 from './images/short/Short1.png';
 import ImageMapper from 'react-img-mapper';
-import myData from './imageMapLocations/Dutchroom1.json';
+import myData from './imageMapLocations/ShortGallery1.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
@@ -11,12 +11,14 @@ import sortie from './images/art/leaving.jpeg';
 import study1 from './images/art/study.jpeg';
 import study2 from './images/art/study-2.jpeg'
 
-import sea from './images/seascape-in-scene.png';
 import rightArrow from './images/icons/right-arrow.png';
 
+import hover1 from './images/short/Short1a.png';
+import hover2 from './images/short/Short1b.png';
+import hover3 from './images/short/Short1c.png';
+import hover4 from './images/short/Short1d.png';
+import hover5 from './images/short/Short1e.png';
 
-
-//TODO: redo this page 
 
 import './App.css';
 import './generalStyling.css';
@@ -185,28 +187,23 @@ function ShortGallery1() {
                 />
 
                 {showJockey ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
                 }
 
                 {showProcession ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover5} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
                 }
 
                 {showSortie ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover4} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
                 }
 
                 {showStudy1 ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover3} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1}} /> : null
                 }
 
                 {showStudy2 ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
                 }
             </div>
 
