@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import dutch2 from './images/dutch2.png';
+import dutch2 from './images/dutchroom/Dutch2.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom2.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 
-import sea from './images/seascape-in-scene.png';
+import hover1 from './images/dutchroom/Dutch2a.png';
+import hover2 from './images/dutchroom/Dutch2b.png';
+
 import seascape from './images/art/seascape.jpg';
 import ladyAndGent from './images/art/lady+gentleman.jpeg';
 import leftArrow from './images/icons/left-arrow.png';
@@ -91,7 +93,7 @@ function DutchRoom2() {
                     title={"The Storm on the Sea of Galilee"}
                     info={["Oil on Canvas - 1633 - Rembrandt", "160 x 128 cm (63 x 50 3/8 in.)"]}
                     noteworthy={["Brutally cut from frame", "Rembrandt's only seascape"]}
-                    value={"Worth $100 million"}
+                    value={"Value: $100 million"}
                     image={seascape}
                     closeFunction={setShowSeascapeModal} />
                 : null}
@@ -111,13 +113,11 @@ function DutchRoom2() {
                 />
 
                 {showLadyAndGent ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
                 }
 
                 {showSeascape ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
                 }
             </div>
 

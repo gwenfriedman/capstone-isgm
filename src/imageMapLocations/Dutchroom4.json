@@ -1,118 +1,45 @@
 [
-    {
-      "id": "1",
-      "title": "ladyAndGent-frame",
-      "shape": "poly",
-      "name": "ladyAndGent-frame",
-      "fillColor": "#eab54d4d",
+  {
+    "id": "1",
+    "title": "obelisk-frame",
+    "shape": "poly",
+    "name": "obelisk-frame",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      2979,1570,2732,1858,2739,1900,3305,1950,3321,1900,3318,1580
+    ],
+    "polygon": [
+      [
+        2979,1570
+      ],
+      [
+        2732,1858
+      ],
+      [
+        2739,1900
+      ],
+      [
+        3305,1950
+      ],
+      [
+        3321,1900
+      ],
+      [
+        3318,1580
+      ]
+    ]
+  },
+
+  {
+      "id": "2",
+      "title": "obelisk",
+      "shape": "rect",
+      "name": "obelisk",
+      "fillColor": "#ffffff00",
       "strokeColor": "#ffffff00",
       "coords": [
-        1865,1257,1757,1292,1678,1390,2004,1478,2226,1387,2226,1320
-      ],
-      "polygon": [
-        [
-            1865,1257
-        ],
-        [
-            1757,1292
-        ],
-        [
-            1678,1390
-        ],
-        [
-            2004,1478 
-        ],
-        [
-            2226,1387
-        ],
-        [
-            2226,1320
-        ]
+        1279,624,1827,1156
       ]
-    },
-
-    {
-        "id": "2",
-        "title": "seascape-frame",
-        "shape": "poly",
-        "name": "seascape-frame",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "#ffffff00",
-        "coords": [
-            1903,1901,1900,1812,2504,1543,3112,1629,3115,1733,2745,1961,2181,1964
-        ],
-        "polygon": [
-          [
-            1903,1901
-          ],
-          [
-            1900,1812
-          ],
-          [
-            2504,1543
-          ],
-          [
-            3112,1629
-          ],
-          [
-            3115,1733
-          ],
-          [
-            2745,1961
-          ],
-          [
-            2181,1964
-          ]
-        ]
-      },
-      {
-        "id": "3",
-        "title": "ladyAndGent",
-        "shape": "poly",
-        "name": "ladyAndGent",
-        "fillColor": "#ffffff00",
-        "strokeColor": "#ffffff00",
-        "coords": [
-            1390,530,1371,837,1564,844,1570,518
-        ],
-        "polygon": [
-          [
-            1390,530
-          ],
-          [
-            1371,837
-          ],
-          [
-            1564,844
-          ],
-          [
-            1570,518
-          ]
-        ]
-      },
-      {
-        "id": "4",
-        "title": "seascape",
-        "shape": "poly",
-        "name": "seascape",
-        "fillColor": "#ffffff00",
-        "strokeColor": "#ffffff00",
-        "coords": [
-            2694,423,2685,904,3103,907,3100,375
-        ],
-        "polygon": [
-          [
-            2694,423
-          ],
-          [
-            2685,904
-          ],
-          [
-            3103,907
-          ],
-          [
-            3100,375
-          ]
-        ]
-      }
+    }
 ]

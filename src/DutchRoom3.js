@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import dutch2 from './images/dutch2.png';
+import dutch3 from './images/dutchroom/Dutch3.png';
 import ImageMapper from 'react-img-mapper';
-import myData from './imageMapLocations/Dutchroom2.json';
+import myData from './imageMapLocations/Dutchroom3.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 
-import sea from './images/seascape-in-scene.png';
+import hover1 from './images/dutchroom/Dutch3a.png';
+import hover2 from './images/dutchroom/Dutch3b.png';
+import hover3 from './images/dutchroom/Dutch3c.png';
+
 import seascape from './images/art/seascape.jpg';
-import ladyAndGent from './images/art/lady+gentleman.jpeg';
+import gu from './images/art/gu.jpeg';
+import concert from './images/art/the-concert.jpeg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
 
@@ -18,16 +22,16 @@ import './generalStyling.css';
 
 function DutchRoom3() {
 
-
-    //TODO: replace all of this!
-
     const MAP = {
         name: 'my-map',
         areas: myData
     };
 
-    const [showLadyAndGent, setShowLadyAndGent] = useState(false);
-    const [showLadyAndGentModal, setShowLadyAndGentModal] = useState(false);
+    const [showGu, setShowGu] = useState(false);
+    const [showGuModal, setShowGuModal] = useState(false);
+
+    const [showConcert, setShowConcert] = useState(false);
+    const [showConcertModal, setShowConcertModal] = useState(false);
 
     const [showSeascape, setShowSeascape] = useState(false);
     const [showSeascapeModal, setShowSeascapeModal] = useState(false);
@@ -35,30 +39,38 @@ function DutchRoom3() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const openModal = (area) => {
-        if (area.title === "ladyAndGent-frame") {
-            setShowLadyAndGentModal(true);
+        if (area.title === "gu-frame") {
+            setShowGuModal(true);
         } else if (area.title === "seascape-frame") {
             setShowSeascapeModal(true);
-        } else if (area.title === "ladyAndGent") {
-            setShowLadyAndGentModal(true);
+        } else if (area.title === "concert-frame") {
+            setShowConcertModal(true);
+        } else if (area.title === "gu") {
+            setShowGuModal(true);
         } else if (area.title === "seascape") {
             setShowSeascapeModal(true);
+        } else if (area.title === "concert") {
+            setShowConcertModal(true);
         }
     };
 
     const enterArea = (area) => {
-        if (area.title === "ladyAndGent") {
-            setShowLadyAndGent(true);
+        if (area.title === "gu") {
+            setShowGu(true);
         } else if (area.title === "seascape") {
             setShowSeascape(true);
+        } else if (area.title === "concert") {
+            setShowConcert(true);
         }
     };
 
     const leaveArea = (area) => {
-        if (area.title === "ladyAndGent") {
-            setShowLadyAndGent(false);
+        if (area.title === "gu") {
+            setShowGu(false);
         } else if (area.title === "seascape") {
             setShowSeascape(false);
+        } else if (area.title === "concert") {
+            setShowConcert(false);
         }
     };
 
@@ -79,14 +91,14 @@ function DutchRoom3() {
     return (
         <div style={{ width: '100%' }}>
 
-            {showLadyAndGentModal ?
+            {showGuModal ?
                 <ArtModal
-                    title={"A Lady and Gentleman in Black"}
-                    info={["Oil on canvas - 1633 - Rembrandt", "131.6 x 109 cm (51 13/16 x 42 15/16 in.)"]}
-                    noteworthy={["Rembrandt originally painted a child leaning on the seated lady's leg. Art historians speculate that the child died young and that the couple asked for the image to be painted out so as not to bring back painful memories."]}
-                    value={"Value: Unknown"}
-                    image={ladyAndGent}
-                    closeFunction={setShowLadyAndGentModal} />
+                    title={"Gu"}
+                    info={["Bronze - 12th century BC - From China", "26.5 x 15.6 cm (10 7/16 x 6 1/8 in.)"]}
+                    noteworthy={["Weighs 1.114 kg (2 lbs. 7 oz.)"]}
+                    value={"Value: Several thousand dollars"}
+                    image={gu}
+                    closeFunction={setShowGuModal} />
                 : null}
 
 
@@ -100,10 +112,20 @@ function DutchRoom3() {
                     closeFunction={setShowSeascapeModal} />
                 : null}
 
+            {showConcertModal ?
+                <ArtModal
+                    title={"The Concert"}
+                    info={["Oil on Canvas - 1663-1666 - Vermeer", "72.5 x 64.7 cm (28 9/16 x 25 1/2 in.)"]}
+                    noteworthy={["Considered the rarest and most valuable piece of the stolen art"]}
+                    value={"Value: 250 - 400 million"}
+                    image={concert}
+                    closeFunction={setShowConcertModal} />
+                : null}
 
-            <div style={{ position: "relative" }} className={showLadyAndGentModal || showSeascapeModal ? "overlay" : ""}>
+
+            <div style={{ position: "relative" }} className={showGuModal || showSeascapeModal || showConcertModal ? "overlay" : ""}>
                 <ImageMapper
-                    src={dutch2}
+                    src={dutch3}
                     width={screenWidth}
                     map={MAP}
                     responsive={true}
@@ -114,14 +136,16 @@ function DutchRoom3() {
                     onMouseLeave={area => leaveArea(area)}
                 />
 
-                {showLadyAndGent ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                {showGu ?
+                    <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1}} /> : null
                 }
 
                 {showSeascape ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1}} /> : null
+                }
+
+                {showConcert ?
+                    <img src={hover3} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1}} /> : null
                 }
             </div>
 

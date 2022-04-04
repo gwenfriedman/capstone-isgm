@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import dutch4 from './images/DutchRoom4.png';
+import dutch4 from './images/dutchroom/Dutch4.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom4.json';
 import ArtModal from './ArtModal';
@@ -7,9 +7,10 @@ import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import obelisk from './images/art/landscape.jpeg';
 
-import sea from './images/seascape-in-scene.png';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
+
+import hover from './images/dutchroom/Dutch4a.png';
 
 
 import './App.css';
@@ -88,8 +89,7 @@ function DutchRoom4() {
                 />
 
                 {showObelisk ?
-                    // TODO: replace
-                    <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+                    <img src={hover} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1}} /> : null
                 }
             </div>
 

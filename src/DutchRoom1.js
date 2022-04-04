@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import dutch1 from './images/DutchRoom1.png';
+import dutch1 from './images/dutchroom/dutch1.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom1.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
-import sea from './images/seascape-in-scene.png';
 import selfPortrait from './images/art/self-portrait-not-stolen.jpeg';
 import etching from './images/art/etching.jpg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
+
+import hover1 from './images/dutchroom/Dutch1a.png';
+import hover2 from './images/dutchroom/Dutch1b.png';
 
 import './App.css';
 import './generalStyling.css';
@@ -94,9 +96,7 @@ function DutchRoom1() {
           image={selfPortrait}
           closeFunction={setShowSelfPortraitModal} />
         : null}
-
-      {/* TODO: add arrows! */}
-
+        
       <div style={{ position: "relative" }} className={showEtchingModal || showSelfPortraitModal ? "overlay" : ""}>
         <ImageMapper
           src={dutch1}
@@ -111,13 +111,11 @@ function DutchRoom1() {
         />
 
         {showEtching ?
-          // TODO: replace
-          <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+          <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
         }
 
         {showSelfPortrait ?
-          // TODO: replace
-          <img src={sea} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0 }} /> : null
+          <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
         }
       </div>
 

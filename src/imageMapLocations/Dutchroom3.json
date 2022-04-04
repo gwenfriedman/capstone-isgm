@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "title": "concert-frame",
+    "shape": "poly",
+    "name": "concert-frame",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      1314,1703,1640,1963,1839,1953,2308,1697,2299,1634,2004,1409,1317,1618
+    ],
+    "polygon": [
+      [
+        1314,1703
+      ],
+      [
+        1640,1963
+      ],
+      [
+        1839,1953
+      ],
+      [
+        2308,1697
+      ],
+      [
+        2299,1634
+      ],
+      [
+        2004,1409
+      ],
+      [
+        1317,1618
+      ]
+    ]
+  },
+
+  {
+      "id": "2",
+      "title": "seascape-frame",
+      "shape": "poly",
+      "name": "seascape-frame",
+      "fillColor": "#eab54d4d",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        728,1263,459,1412,472,1485,1007,1494,1121,1326,1111,1270
+      ],
+      "polygon": [
+        [
+          728,1263
+        ],
+        [
+          459,1412
+        ],
+        [
+          472,1485
+        ],
+        [
+          1007,1494
+        ],
+        [
+          1121,1326
+        ],
+        [
+          1111,1270
+        ]
+      ]
+    },
+    {
+      "id": "3",
+      "title": "concert",
+      "shape": "rect",
+      "name": "concert",
+      "fillColor": "#ffffff00",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        2400,507,2837,1102
+      ]
+    },
+    {
+      "id": "4",
+      "title": "seascape",
+      "shape": "rect",
+      "name": "seascape",
+      "fillColor": "#ffffff00",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        852,301,1235,814
+      ]
+    },
+    {
+      "id": "4",
+      "title": "gu",
+      "shape": "rect",
+      "name": "gu",
+      "fillColor": "#ffffff00",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        1494,779,1608,950
+      ]
+    }
+]
