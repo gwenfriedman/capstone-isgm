@@ -14,6 +14,8 @@ import leftArrow from './images/icons/left-arrow.png';
 import './App.css';
 import './generalStyling.css';
 
+//TODO: redo this page 
+
 function ShortGallery2() {
 
     const MAP = {

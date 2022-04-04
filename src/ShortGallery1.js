@@ -15,6 +15,9 @@ import sea from './images/seascape-in-scene.png';
 import rightArrow from './images/icons/right-arrow.png';
 
 
+
+//TODO: redo this page 
+
 import './App.css';
 import './generalStyling.css';
 

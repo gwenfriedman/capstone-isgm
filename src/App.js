@@ -6,11 +6,16 @@ import Dutchroom1 from './DutchRoom1';
 import Dutchroom2 from './DutchRoom2';
 import Dutchroom3 from './DutchRoom3';
 import Dutchroom4 from './DutchRoom4';
+import Blueroom from './BlueRoom';
 import ShortGallery1 from './ShortGallery1';
 import ShortGallery2 from './ShortGallery2';
+import Courtyard from './Courtyard';
+import CourtyardWitnesses from './Courtyard-witnesses';
 import Map from './Map'
 import { Route, Routes, useLocation, Outlet } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import CourtyardFBI from './Courtyard-FBI';
+import CourtyardDirector from './CourtyardDirector';
 
 function App() {
 
@@ -58,9 +63,14 @@ function App() {
             <Route exact path="/dutchroom2" element={<Dutchroom2 />} />
             <Route exact path="/dutchroom3" element={<Dutchroom3 />} />
             <Route exact path="/dutchroom4" element={<Dutchroom4 />} />
+            <Route exact path="/blueroom" element={<Blueroom />} />
             <Route exact path="/shortgallery1" element={<ShortGallery1 />} />
             <Route exact path="/shortgallery2" element={<ShortGallery2 />} />
             <Route exact path="/map" element={<Map />} />
+            <Route exact path="/courtyard" element={<Courtyard />} />
+            <Route exact path="/courtyardWitnesses" element={<CourtyardWitnesses />} />
+            <Route exact path="/courtyardFBI" element={<CourtyardFBI />} />
+            <Route exact path="/courtyardDirector" element={<CourtyardDirector />} />
           </Route>
         </Routes>
       </AnimatePresence>
