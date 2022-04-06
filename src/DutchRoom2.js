@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import dutch2 from './images/dutchroom/Dutch2.png';
+import dutch2 from './images/dutchroom/dutch2.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom2.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 
-import hover1 from './images/dutchroom/Dutch2a.png';
-import hover2 from './images/dutchroom/Dutch2b.png';
+import hover1 from './images/dutchroom/dutch2a.png';
+import hover2 from './images/dutchroom/dutch2b.png';
 
 import seascape from './images/art/seascape.jpg';
 import ladyAndGent from './images/art/lady+gentleman.jpeg';

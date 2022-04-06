@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import dutch4 from './images/dutchroom/Dutch4.png';
+import dutch4 from './images/dutchroom/dutch4.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom4.json';
 import ArtModal from './ArtModal';
@@ -10,7 +10,7 @@ import obelisk from './images/art/landscape.jpeg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
 
-import hover from './images/dutchroom/Dutch4a.png';
+import hover from './images/dutchroom/dutch4a.png';
 
 
 import './App.css';

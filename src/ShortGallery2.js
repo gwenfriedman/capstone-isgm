@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import shortgallery2 from './images/short/Short2.png';
+import shortgallery2 from './images/short/short2.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/ShortGallery2.json';
 import ArtModal from './ArtModal';
@@ -12,7 +12,7 @@ import leftArrow from './images/icons/left-arrow.png';
 import './App.css';
 import './generalStyling.css';
 
-import hover from './images/short/Short2a.png';
+import hover from './images/short/short2a.png';
 
 
 function ShortGallery2() {

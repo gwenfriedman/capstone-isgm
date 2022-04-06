@@ -1,5 +1,5 @@
 import React from 'react'
-import home from './images/Homescreen.png';
+import home from './images/homescreen.png';
 import { useNavigate } from "react-router-dom";
 
 import './App.css';

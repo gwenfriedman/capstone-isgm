@@ -1,5 +1,5 @@
 import React from 'react'
-import pic from './images/Guard-Lineup.png';
+import pic from './images/guard-lineup.png';
 import { useNavigate } from "react-router-dom";
 
 import './App.css';

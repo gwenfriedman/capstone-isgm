@@ -1,5 +1,4 @@
 import React from 'react'
-import pic from './images/Randy.png';
 import { useNavigate } from "react-router-dom";
 
 import './App.css';

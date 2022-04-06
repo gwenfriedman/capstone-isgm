@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import blueroom from './images/BlueRoom1.png';
+import blueroom from './images/blueroom1.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Blueroom.json';
 import ArtModal from './ArtModal';

@@ -1,5 +1,5 @@
 import React from 'react'
-import witnesses from './images/Witnesses.png';
+import witnesses from './images/witnesses.png';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import leftArrow from './images/icons/left-arrow.png';

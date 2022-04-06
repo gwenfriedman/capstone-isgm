@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactFlashlight } from "react-flashlight";
-import tunnelImg from './images/Tunnel.png'
+import tunnelImg from './images/tunnel.png'
 import audio1 from './audio/test-audio.m4a'
 import { useNavigate } from "react-router-dom";
 

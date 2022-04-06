@@ -1,5 +1,5 @@
 import React from 'react'
-import fbi from './images/Baker.png';
+import fbi from './images/baker.png';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import leftArrow from './images/icons/left-arrow.png';

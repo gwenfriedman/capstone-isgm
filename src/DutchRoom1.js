@@ -10,8 +10,8 @@ import etching from './images/art/etching.jpg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
 
-import hover1 from './images/dutchroom/Dutch1a.png';
-import hover2 from './images/dutchroom/Dutch1b.png';
+import hover1 from './images/dutchroom/dutch1a.png';
+import hover2 from './images/dutchroom/dutch1b.png';
 
 import './App.css';
 import './generalStyling.css';
