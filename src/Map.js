@@ -1,15 +1,12 @@
 import React from 'react';
-import map from './images/map.png'
-import mapText from './images/mapText.png'
+import map from './images/map-final.png'
+import mapText from './images/map-text-final.png'
 
 import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
 
 function Map() {
-
-
-  //TODO: fix colors!
-
+  
   var mapData = [
     {
       "id": "dutchroom1",
@@ -20,10 +17,10 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        1138,860,1666,1596
+        513,323,766,668
       ],
-      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#ff000080',
-      "fillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#ff000080'
+      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675',
+      "fillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675'
     },
     {
       "id": "shortgallery1",
@@ -34,10 +31,10 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        3074,1956,3678,2116
+        1409,820,1678,899
       ],
-      "preFillColor": localStorage.getItem("shortgallery1") == null ? '#FF2D00' : '#ff000080',
-      "fillColor": localStorage.getItem("shortgallery1") == null ? '#FF2D00' : '#ff000080'
+      "preFillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075',
+      "fillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075'
     },
     {
       "id": "office",
@@ -48,10 +45,10 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        2026,2251,2429,2480
+        1988,655,2153,731
       ],
-      "preFillColor": localStorage.getItem("office") == null ? '#FF2D00' : '#ff000080',
-      "fillColor": localStorage.getItem("office") == null ? '#FF2D00' : '#ff000080'
+      "preFillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375',
+      "fillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375'
     },
     {
       "id": "courtyard",
@@ -62,10 +59,10 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        4830,1866,5941,2588
+        2197,766,2720,1127
       ],
-      "preFillColor": localStorage.getItem("courtyard") == null ? '#FF2D00' : '#ff000080',
-      "fillColor": localStorage.getItem("courtyard") == null ? '#FF2D00' : '#ff000080'
+      "preFillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75',
+      "fillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75'
     },
     {
       "id": "blueroom",
@@ -76,10 +73,10 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        6288,2397,6655,2820
+        2868,1029,3039,1219
       ],
-      "preFillColor": localStorage.getItem("blueroom") == null ? '#FF2D00' : '#ff000080',
-      "fillColor": localStorage.getItem("blueroom") == null ? '#FF2D00' : '#ff000080'
+      "preFillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75',
+      "fillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75'
     }
   ]
   let navigate = useNavigate();
@@ -92,7 +89,6 @@ function Map() {
   function clickRoom(room) {
     localStorage.setItem(room.id, room.id)
     navigate(`/${room.id}`)
-    console.log(localStorage, room, localStorage.getItem("dutchroom1"))
   }
 
   return (
@@ -112,7 +108,11 @@ function Map() {
         style={{ position: "relative", top: 0, left: 0, zIndex: 2, pointerEvents: 'none' }}
       />
 
-      <button onClick={() => { localStorage.clear() }}> Clear </button>
+      {/* <button onClick={() => { localStorage.clear() }}> Clear </button> */}
+
+      <button className='styledButton' onClick={() => navigate("/exit")}>
+          Exit
+      </button>
 
     </div>
   )

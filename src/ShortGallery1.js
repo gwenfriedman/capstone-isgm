@@ -170,8 +170,6 @@ function ShortGallery1() {
                     closeFunction={setShowStudy2Modal} />
                 : null}
 
-
-            {/* TODO: add new data to pull from */}
             <div style={{ position: "relative" }} className={showJockeyModal || showSortieModal || showProcessionModal || showStudy1Modal || showStudy2Modal ? "overlay" : ""}>
                 <ImageMapper
                     src={shortgallery1}

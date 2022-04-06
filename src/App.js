@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Home';
-import Flashlight from './Flashlight';
+import Tunnel from './Tunnel';
 import Audio from './Audio';
 import Dutchroom1 from './DutchRoom1';
 import Dutchroom2 from './DutchRoom2';
@@ -16,6 +16,19 @@ import { Route, Routes, useLocation, Outlet } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import CourtyardFBI from './Courtyard-FBI';
 import CourtyardDirector from './CourtyardDirector';
+import About from './About';
+import Intro from './Intro';
+import CallToPolice from './CallToPolice';
+import PhoneCall from './PhoneCall';
+import ArriveOnScene from './ArriveOnScene';
+import InsideOffice from './InsideOffice';
+import GuardLineup from './GuardLineUp';
+import Rick from './Rick';
+import Randy from './Randy';
+import PoliceSketches from './PoliceSketches';
+import Office from './Office';
+import Exit from './Exit';
+import SuspectFiles from './SuspectFiles';
 
 function App() {
 
@@ -57,8 +70,8 @@ function App() {
 
             {/* TODO: on leave pause audio?? */}
             <Route path="/" element={<Home />} />
-            <Route exact path="/flashlight" element={<Flashlight />} />
-            <Route exact path="/audio" element={<Audio />} />
+            <Route exact path="/tunnel" element={<Tunnel />} />
+            {/* <Route exact path="/audio" element={<Audio />} /> */}
             <Route exact path="/dutchroom1" element={<Dutchroom1 />} />
             <Route exact path="/dutchroom2" element={<Dutchroom2 />} />
             <Route exact path="/dutchroom3" element={<Dutchroom3 />} />
@@ -71,6 +84,19 @@ function App() {
             <Route exact path="/courtyardWitnesses" element={<CourtyardWitnesses />} />
             <Route exact path="/courtyardFBI" element={<CourtyardFBI />} />
             <Route exact path="/courtyardDirector" element={<CourtyardDirector />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/intro" element={<Intro />} />
+            <Route exact path="/callToPolice" element={<CallToPolice />} />
+            <Route exact path="/phoneCall" element={<PhoneCall />} />
+            <Route exact path="/arriveOnScene" element={<ArriveOnScene />} />
+            <Route exact path="/insideOffice" element={<InsideOffice />} />
+            <Route exact path="/guardLineup" element={<GuardLineup />} />
+            <Route exact path="/rick" element={<Rick />} />
+            <Route exact path="/randy" element={<Randy />} />
+            <Route exact path="/policeSketches" element={<PoliceSketches />} />
+            <Route exact path="/office" element={<Office />} />
+            <Route exact path="/exit" element={<Exit />} />
+            <Route exact path="/suspectFiles" element={<SuspectFiles />} />
           </Route>
         </Routes>
       </AnimatePresence>
