@@ -4,7 +4,7 @@ import './Questions.css';
 
 const QuestionBlock = props => {
     const questions = props.questions.map((q, i) =>
-        <Question text={q} id={i} />
+        <Question text={q} id={i} clickFunction={props.functions[i]} questionId={props.blockId} />
     );
 
     return (

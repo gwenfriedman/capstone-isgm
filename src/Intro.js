@@ -16,6 +16,7 @@ function Intro() {
   const [displayButton, setDisplayButton] = useState(false);
 
   useEffect(() => {
+    console.log(introAudio)
     setTimeout(() => setDisplayButton(true), 70000)
   }, [])
 
@@ -29,8 +30,8 @@ function Intro() {
       </div>
 
       <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-        {Captions(
-          ["Boston Police, we got a report of a disturbance on the premises",
+        <Captions
+          text={["Boston Police, we got a report of a disturbance on the premises",
             "What’s the matter officer? Is there something wrong?",
             "Open the gate, we got a report of a disturbance on the premises",
             "We haven’t seen anything in here, but you’re welcome to come take a look",
@@ -45,14 +46,13 @@ function Intro() {
             "What’s going on here? Everything ok officers?",
             "Put him up against the wall, pat him down and handcuff him",
             "put it around his head. make sure his eyes are completely covered",
-            "Don’t try anything funny and you won’t get hurt. Gentlemen, this is a robbery",
-            ""
-
-          ],
-          ["Robber #1", "Rick", "Robber #2", "Rick", "Robber #2", "Rick", "Robber #2", "Rick",
-            "Robber #2", "Rick", "Randy", "Robber #1", "Randy", "Robber #2", "Robber #1", "Robber #2"],
-          [0, 6000, 3500, 4000, 8000, 3000, 3000, 2000, 1000, 2000, 7000, 3000, 13000, 2000, 3000, 5000, 9000],
-          introAudio, 70000)}
+            "Don’t try anything funny and you won’t get hurt. Gentlemen, this is a robbery"
+          ]}
+          people={["Robber #1", "Rick", "Robber #2", "Rick", "Robber #2", "Rick", "Robber #2", "Rick",
+            "Robber #2", "Rick", "Randy", "Robber #1", "Randy", "Robber #2", "Robber #1", "Robber #2"]}
+          timeoutDelays={[0, 6000, 3500, 4000, 8000, 3000, 3000, 2000, 1000, 2000, 7000, 3000, 13000, 2000, 3000, 5000, 9000]}
+          audio={introAudio} 
+          endTime={70000} />
       </div>
 
 

@@ -26,13 +26,14 @@ function Tunnel() {
 
       {/* TODO: only show once user hovers over rick */}
       <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-        {Captions(
-          [
+        <Captions
+          text={[
             "Oh my god, they’re alive. Help me untie them"
-          ],
-          ["Detective Willard"],
-          [0, 4000],
-          audio, 4000)}
+          ]}
+          people={["Detective Willard"]}
+          timeoutDelays={[0, 4000]}
+          audio={audio}
+          endTime={4000} />
       </div>
 
       <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/guardLineup")}>

@@ -25,13 +25,13 @@ function ArriveOnScene() {
             </div>
 
             <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-                {Captions(
-                    [
+                <Captions text={[
                         "Hey, I’m Detective Willard, I just got here, I haven’t spoken to anyone yet but the chief of security is waiting for us inside."
-                    ],
-                    ["Detective Willard"],
-                    [0, 15000],
-                    audio, 15000)}
+                    ]}
+                    people={["Detective Willard"]}
+                    timeoutDelays={[0, 15000]}
+                    audio={audio}
+                    endTime={15000} />
             </div>
 
             <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/insideOffice")}>

@@ -22,15 +22,16 @@ function CallToPolice() {
             <style>{'body { background-color: black; }'}</style>
 
             <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-                {Captions(
-                    [
+                <Captions
+                    text={[
                         "911 what’s your emergency?",
                         "I'm calling from the Gardner Museum, we’ve got big trouble. we’ve got big trouble!",
                         "I’m sending units now"
-                    ],
-                    ["911 Operator", "Chief of Security", "911 Operator"],
-                    [0, 6000, 3500, 4000],
-                    policeCallAudio, 13000)}
+                    ]}
+                    people={["911 Operator", "Chief of Security", "911 Operator"]}
+                    timeoutDelays={[0, 6000, 3500, 4000]}
+                    audio={policeCallAudio}
+                    endTime={13000} />
             </div>
 
             <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/phoneCall")}>

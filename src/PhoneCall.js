@@ -7,7 +7,7 @@ import './App.css';
 import './generalStyling.css';
 
 function PhoneCall() {
-  
+
   let navigate = useNavigate();
 
   const [displayButton, setDisplayButton] = useState(false);
@@ -27,18 +27,18 @@ function PhoneCall() {
     <div style={{ width: '100%' }}>
       <style>{'body { background-color: black; }'}</style>
 
-      {/* TODO: how to add this? */}
-      {/* {answerPhone &&
+      {answerPhone &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-          {Captions(
-            [
+          <Captions
+            text={[
               "You need to get to the Isabella Stuart Gardner Museum immediately. There’s been a robbery. I’m sending another detective to meet you at the scene."
-            ],
-            ["Police Chief"],
-            [0, 10000],
-            audio, 10000)}
+            ]}
+            people={["Police Chief"]}
+            timeoutDelays={[0, 10000]}
+            audio={audio}
+            endTime={10000} />
         </div>
-      } */}
+      }
 
       <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/arriveOnScene")}>
         Head to the museum

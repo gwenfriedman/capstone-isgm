@@ -57,14 +57,14 @@ function Audio() {
 
       <button className='styledButton'> Enter the crime scene </button>
 
-      <QuestionBlock title={"What would you like to ask the FBI agent?"}
+      {/* <QuestionBlock title={"What would you like to ask the FBI agent?"}
         questions={[
           "What do you think the thieves are doing with the paintings?",
           "How would you profile the thieves?",
           "Is there anything unusual about this robbery?",
           "Why this museum? Why now?"
         ]}
-      />
+      /> */}
     </div>
   );
 }
