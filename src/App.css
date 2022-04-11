@@ -94,13 +94,12 @@ button {
 }
 
 .caption-block {
-  margin-top: -20px;
+  margin-top: -25px;
   background-color: white;
   color: black;
   font-size: 30 !important;
-  height: 50px;
+  height: 60px;
   width: 500px;
-  /* outline: auto; */
   padding-left: 10px;
   z-index: 1;
   padding-top: 10px;
@@ -112,8 +111,12 @@ button {
   outline-offset: 0;
 }
 
+.caption-text {
+  margin-top: 0 !important;
+  margin-bottom: -8px !important;
+}
+
 .speaker {
-  /* outline: auto; */
   font-size: 30 !important;
   color: black;
   background-color: white;
@@ -131,10 +134,6 @@ button {
   outline-offset: 0;
 }
 
-.captions {
-  margin-left: 20px;
-}
-
 .captionButton {
   width: 50px;
   height: 50px;
@@ -145,13 +144,14 @@ button {
 
 .caption-container {
   display: flex;
+  flex-direction: column;
 }
 
-.captionImage {
+/* .captionImage {
   height: 25px;
   text-align: center;
   margin-top: 4px;
-}
+} */
 
 .screenSizeWarning {
   height: 100vh;
@@ -214,4 +214,22 @@ button {
   width: 450px;
   padding: 20px;
   background-color: #00000066;
+}
+
+.buttonTransition {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.buttonHide {
+  opacity: 0;
+  pointer-events:none;
+}
+
+.guard-buttons {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0 !important;
+  width: 100%;
 }

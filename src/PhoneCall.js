@@ -1,28 +1,55 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
+import audio from './audio/intro/phone-call.mp3';
+import Captions from './Captions';
 
 import './App.css';
 import './generalStyling.css';
 
 function PhoneCall() {
+  
+  let navigate = useNavigate();
 
+  const [displayButton, setDisplayButton] = useState(false);
+  const [answerPhone, setAnswerPhone] = useState(false);
 
-    let navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => setDisplayButton(true), 13000)
+  }, [])
 
-    return (
-        <div style={{ width: '100%' }}>
-          {/* Should be blank with black background */}
+  const buttonClicked = () => {
+    setAnswerPhone(true)
 
-            <button className='styledButton' onClick={() => navigate("/arriveOnScene")}>
-              Head to the museum
-            </button>
+    setTimeout(() => setDisplayButton(true), 13000)
+  }
 
-            <button className='styledButton buttonCenter'>
-              Answer phone
-            </button>
+  return (
+    <div style={{ width: '100%' }}>
+      <style>{'body { background-color: black; }'}</style>
+
+      {/* TODO: how to add this? */}
+      {/* {answerPhone &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          {Captions(
+            [
+              "You need to get to the Isabella Stuart Gardner Museum immediately. There’s been a robbery. I’m sending another detective to meet you at the scene."
+            ],
+            ["Police Chief"],
+            [0, 10000],
+            audio, 10000)}
         </div>
+      } */}
 
-    )
+      <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/arriveOnScene")}>
+        Head to the museum
+      </button>
+
+      <button className={`styledButton buttonCenter ${answerPhone ? "buttonHide" : "buttonTransition"}`} onClick={() => buttonClicked()}>
+        Answer phone
+      </button>
+    </div>
+
+  )
 }
 
 export default PhoneCall;

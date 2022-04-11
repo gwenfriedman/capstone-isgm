@@ -1,7 +1,6 @@
 import './App.css';
 import Home from './Home';
 import Tunnel from './Tunnel';
-import Audio from './Audio';
 import Dutchroom1 from './DutchRoom1';
 import Dutchroom2 from './DutchRoom2';
 import Dutchroom3 from './DutchRoom3';
@@ -68,10 +67,8 @@ function App() {
         <Routes location={location} key={location.pathname} forceRefresh={true}>
           <Route element={<Wrapper />}>
 
-            {/* TODO: on leave pause audio?? */}
             <Route path="/" element={<Home />} />
             <Route exact path="/tunnel" element={<Tunnel />} />
-            {/* <Route exact path="/audio" element={<Audio />} /> */}
             <Route exact path="/dutchroom1" element={<Dutchroom1 />} />
             <Route exact path="/dutchroom2" element={<Dutchroom2 />} />
             <Route exact path="/dutchroom3" element={<Dutchroom3 />} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { AudioCaptions, Caption } from 'unc-react-audio-captions';
-import audio1 from './audio/test-audio.m4a'
+// import { AudioCaptions, Caption } from 'unc-react-audio-captions';
+// import audio1 from './audio/test-audio.m4a'
 import play from './images/play.png'
 import pause from './images/pause.png'
 
@@ -31,7 +31,7 @@ function Audio() {
       <div className={"caption-container"}>
         <div>
           <h4 className={"speaker"}> Chief of Security </h4>
-          <AudioCaptions className={"caption-block"} src={audio1} autoPlay ref={(el) => { captions = el; }}>
+          {/* <AudioCaptions className={"caption-block"} src={audio1} autoPlay ref={(el) => { captions = el; }}>
             <Caption start="0" end="4.2">
               I'm calling from the gardner museum
             </Caption>
@@ -43,7 +43,7 @@ function Audio() {
             <Caption start="4.2" noDisplay>
               we’ve got big trouble!
             </Caption>
-          </AudioCaptions>
+          </AudioCaptions> */}
         </div>
 
         <button className="captionButton" onClick={toggleAudio}>

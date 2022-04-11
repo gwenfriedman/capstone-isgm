@@ -15,7 +15,6 @@
     "react-img-mapper": "^1.3.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "unc-react-audio-captions": "^0.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -8,29 +8,42 @@ import './generalStyling.css';
 function GuardLineup() {
 
 
-    let navigate = useNavigate();
+  let navigate = useNavigate();
 
-    return (
-        <div style={{ width: '100%' }}>
+  function clickRandy() {
+    localStorage.setItem("randy", "randy")
+    navigate("/randy")
+  }
 
-            <div style={{ position: "relative" }} >
-                <img src={pic} width={"100%"} />
-            </div>
+  function clickRick() {
+    localStorage.setItem("rick", "rick")
+    navigate("/rick")
+  }
 
-            <button className='styledButton' onClick={() => navigate("/rick")}>
-              Rick
-            </button>
+  return (
+    <div style={{ width: '100%' }}>
 
-            <button className='styledButton' onClick={() => navigate("/randy")}>
-              Randy
-            </button>
+      <div style={{ position: "relative" }} >
+        <img src={pic} width={"100%"} />
+      </div>
 
-            <button className='styledButton' onClick={() => navigate("/policeSketches")}>
-              Work with the sketch artist
-            </button>
-        </div>
+      <div className='guard-buttons'>
+        <button className='styledButton' onClick={() => clickRick()}>
+          Rick
+        </button>
 
-    )
+        <button className='styledButton' onClick={() => clickRandy()}>
+          Randy
+        </button>
+      </div>
+
+      <button className={`styledButton buttonCenter ${(localStorage.getItem("randy") != null && localStorage.getItem("rick") != null) ? "buttonTransition" : "buttonHide"}`}
+        onClick={() => navigate("/policeSketches")}>
+        Work with the sketch artist
+      </button>
+    </div>
+
+  )
 }
 
 export default GuardLineup;
