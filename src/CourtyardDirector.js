@@ -1,23 +1,137 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import anne from './images/anne.png';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import leftArrow from './images/icons/left-arrow.png';
+import QuestionBlock from './QuestionBlock';
+import Captions from './Captions';
+import intro from './audio/anne/anne-intro.mp3';
+import anne1 from './audio/anne/anne1.mp3';
+import anne2 from './audio/anne/anne2.mp3';
+import anne3 from './audio/anne/anne3.mp3';
 
 import './App.css';
 import './generalStyling.css';
 
 function CourtyardDirector() {
 
+  const [showIntro, setShowIntro] = useState(true);
+  const [showq1, setShowq1] = useState(false);
+  const [showq2, setShowq2] = useState(false);
+  const [showq3, setShowq3] = useState(false);
+  const [showQuestions, setShowQuestions] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowQuestions(true), 7000)
+  }, [])
+
+  function clickedq1() {
+    setShowq1(true)
+    setShowq2(false)
+    setShowq3(false)
+    setShowIntro(false)
+  }
+
+  function clickedq2() {
+    setShowq1(false)
+    setShowq2(true)
+    setShowq3(false)
+    setShowIntro(false)
+  }
+
+  function clickedq3() {
+    setShowq1(false)
+    setShowq2(false)
+    setShowq3(true)
+    setShowIntro(false)
+  }
+
 
   let navigate = useNavigate();
 
   return (
     <div style={{ width: '100%' }}>
-        
+
       <div style={{ position: "relative" }} >
         <img src={anne} width={"100%"} />
       </div>
+
+      {/* TODO: replace with clip with willard */}
+      {showIntro &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={["Hello there. I'm Anne Hawley, the director of the museum. What do you need?"]}
+            people={["Anne Hawley"]}
+            timeoutDelays={[0, 7000]}
+            audio={intro}
+            endTime={7000} />
+        </div>
+      }
+
+      {showq1 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "Oh, oh my goodness. Well when the FBI let me into the galleries this morning it was actually horrifying. It was just horrifying",
+            "It feels like a death in the family. Really, I feel totally numb. Numb is the word.",
+            "I just don't know what we're going to do now. We do need to get those paintings back. We need to get them back quickly",
+            "When Isabella died she left her infamous will, you know. She said that if anything were permanently changed",
+            "that the collection should be crated and shipped to Paris for auction.",
+            "and Harvard University would get the proceeds."
+          ]}
+            people={["Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley"]}
+            timeoutDelays={[0, 9000, 7000, 7000, 8000, 5000, 4000]}
+            audio={anne1}
+            endTime={40000} />
+        </div>
+      }
+
+      {showq2 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "We’re offering a 1 million dollar reward.",
+            "It's really unusual, but I'm so grateful that Sotheby's and Christie's auction houses, they came together to make this possible",
+            "You know, the museum's concern is really to get the art back. It's really part of our heritage.",
+            "and it's been plundered. The FBI told us a reward would be very helpful to the investigation.",
+            "and it seems like a million dollars is the magic number, so that's what we've done.",
+            "I really just have to operate under the assumption that the paintings will be returned.",
+            "We are a world class musuem, they have to be."
+          ]}
+            people={["Anne Hawley", "Anne Hawley"]}
+            timeoutDelays={[0, 3000, 10000, 6000, 6000, 6000, 4000, 4000]}
+            audio={anne2}
+            endTime={41000} />
+        </div>
+      }
+
+      {showq3 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "The collection was insured for everything but unfortunately not for theft.",
+            "We have been focused on installing a climate control system. The building is almost 100 years old, you know.",
+            "This was really the priority. When it rains clouds form inside the museum because of the moisture.",
+            "Oh and a sewer pipe backed up into one of the galleries. Sewage was coming in the middle of the gallery.",
+            "We don't have time to worry about theft"
+          ]}
+            people={["Anne Hawley", "Anne Hawley"]}
+            timeoutDelays={[0, 5000, 7000, 7000, 7000, 4000]}
+            audio={anne3}
+            endTime={29000} />
+        </div>
+      }
+
+
+      {showQuestions &&
+        <QuestionBlock title={"What would you like to ask Anne?"}
+          questions={[
+            "How is the museum responding to this robbery?",
+            "Does the museum have the finances to offer a reward for the return of the pieces?",
+            "What insurance policies do you have for the museum?"
+          ]}
+          functions={[
+            clickedq1, clickedq2, clickedq3
+          ]}
+          blockId={"anne"}
+        />
+      }
 
       <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
       <img src={leftArrow} alt="left arrow" className='leftArrow' onClick={() => navigate("/courtyard")} />

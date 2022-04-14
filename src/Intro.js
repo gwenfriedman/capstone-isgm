@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import home from './images/homescreen.png';
+import homescreen from './images/homescreen.png';
+import intro1 from './images/intro1.png';
+import intro2 from './images/intro2.png';
 import introAudio from './audio/intro/intro.mp3';
 import { useNavigate } from "react-router-dom";
 
@@ -14,10 +16,12 @@ function Intro() {
 
   let navigate = useNavigate();
   const [displayButton, setDisplayButton] = useState(false);
+  const [bgImage, setBgImage] = useState(homescreen);
 
   useEffect(() => {
-    console.log(introAudio)
     setTimeout(() => setDisplayButton(true), 70000)
+    setTimeout(() => setBgImage(intro1), 20000)
+    setTimeout(() => setBgImage(intro2), 52000)
   }, [])
 
   return (
@@ -26,7 +30,7 @@ function Intro() {
 
       {/* TODO: change image halfway through once I get them */}
       <div style={{ position: "relative" }} >
-        <img src={home} width={"100%"} />
+        <img src={bgImage} width={"100%"} />
       </div>
 
       <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>

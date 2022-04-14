@@ -46,9 +46,6 @@ function Rick() {
         setShowIntro(false)
     }
 
-
-    // TODO: for some reason the intro audio plays twice
-
     return (
         <div style={{ width: '100%' }}>
 

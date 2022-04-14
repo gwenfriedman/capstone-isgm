@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import blueroom from './images/blueroom1.png';
+import office from './images/office.png';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Blueroom.json';
 import ArtModal from './ArtModal';
@@ -16,6 +16,8 @@ function Office() {
     name: 'my-map',
     areas: myData
   };
+
+  //TODO: add new location data!!
 
   const [showChezTortoniModal, setShowChezTortoniModal] = useState(false);
 
@@ -56,7 +58,7 @@ function Office() {
         
       <div style={{ position: "relative" }} className={showChezTortoniModal ? "overlay" : ""}>
         <ImageMapper
-          src={blueroom}
+          src={office}
           width={screenWidth}
           map={MAP}
           responsive={true}

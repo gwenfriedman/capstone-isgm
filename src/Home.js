@@ -15,7 +15,7 @@ function Home() {
 
     useEffect(() => {
         window.addEventListener("mousemove", function () {
-            sound.volume = 0.3
+            sound.volume = 0.2
             sound.play()
         })
     }, [])

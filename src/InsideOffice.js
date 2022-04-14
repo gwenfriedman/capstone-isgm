@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import pic from './images/arriveonscene.png';
+import pic from './images/office-charles.png';
 import { useNavigate } from "react-router-dom";
 import Captions from './Captions';
 import audio from './audio/intro/inside-office.mp3';

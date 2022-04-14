@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
-import audio from './audio/intro/phone-call.mp3';
+import call from './audio/intro/phone-call.mp3';
+import ringing from './audio/intro/ringing.mp3';
 import Captions from './Captions';
 
 import './App.css';
@@ -8,17 +9,22 @@ import './generalStyling.css';
 
 function PhoneCall() {
 
+  let ring = new Audio(ringing)
+
   let navigate = useNavigate();
 
   const [displayButton, setDisplayButton] = useState(false);
   const [answerPhone, setAnswerPhone] = useState(false);
 
   useEffect(() => {
+    ring.play()
     setTimeout(() => setDisplayButton(true), 13000)
   }, [])
 
   const buttonClicked = () => {
     setAnswerPhone(true)
+
+    ring.pause()
 
     setTimeout(() => setDisplayButton(true), 13000)
   }
@@ -35,7 +41,7 @@ function PhoneCall() {
             ]}
             people={["Police Chief"]}
             timeoutDelays={[0, 10000]}
-            audio={audio}
+            audio={call}
             endTime={10000} />
         </div>
       }
