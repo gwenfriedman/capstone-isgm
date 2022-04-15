@@ -9,6 +9,12 @@ import selfPortrait from './images/art/self-portrait-not-stolen.jpeg';
 import etching from './images/art/etching.jpg';
 import leftArrow from './images/icons/left-arrow.png';
 import rightArrow from './images/icons/right-arrow.png';
+import QuestionBlock from './QuestionBlock';
+import Captions from './Captions';
+import intro from './audio/georgia/georgia-intro.mp3';
+import georgia1 from './audio/georgia/georgia1.mp3';
+import georgia2 from './audio/georgia/georgia2.mp3';
+import georgia3 from './audio/georgia/georgia3.mp3';
 
 import hover1 from './images/dutchroom/dutch1a.png';
 import hover2 from './images/dutchroom/dutch1b.png';
@@ -23,6 +29,12 @@ function DutchRoom1() {
     areas: myData
   };
 
+  const [showIntro, setShowIntro] = useState(true);
+  const [showq1, setShowq1] = useState(false);
+  const [showq2, setShowq2] = useState(false);
+  const [showq3, setShowq3] = useState(false);
+  const [showQuestions, setShowQuestions] = useState(false);
+
   const [showEtching, setShowEtching] = useState(false);
   const [showEtchingModal, setShowEtchingModal] = useState(false);
 
@@ -30,6 +42,31 @@ function DutchRoom1() {
   const [showSelfPortraitModal, setShowSelfPortraitModal] = useState(false);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    setTimeout(() => setShowQuestions(true), 4000)
+  }, [])
+
+  function clickedq1() {
+    setShowq1(true)
+    setShowq2(false)
+    setShowq3(false)
+    setShowIntro(false)
+  }
+
+  function clickedq2() {
+    setShowq1(false)
+    setShowq2(true)
+    setShowq3(false)
+    setShowIntro(false)
+  }
+
+  function clickedq3() {
+    setShowq1(false)
+    setShowq2(false)
+    setShowq3(true)
+    setShowIntro(false)
+  }
 
   const openModal = (area) => {
     if (area.title === "etching-frame") {
@@ -96,8 +133,9 @@ function DutchRoom1() {
           image={selfPortrait}
           closeFunction={setShowSelfPortraitModal} />
         : null}
-        
+
       <div style={{ position: "relative" }} className={showEtchingModal || showSelfPortraitModal ? "overlay" : ""}>
+
         <ImageMapper
           src={dutch1}
           width={screenWidth}
@@ -111,13 +149,82 @@ function DutchRoom1() {
         />
 
         {showEtching ?
-          <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
+          <img src={hover2} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
         }
 
         {showSelfPortrait ?
-          <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex:1 }} /> : null
+          <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
         }
       </div>
+
+      {/* TODO: replace with clip with willard */}
+      {showIntro &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={["Hello, I'm Georgia. I'm happy to answer any questions."]}
+            people={["Conservationalist"]}
+            timeoutDelays={[0, 4000]}
+            audio={intro}
+            endTime={4000} />
+        </div>
+      }
+
+      {showq1 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "The paintings weren’t unscrewed from the back, they were cut out. Why would they do that?",
+            "It’s not like cutting a piece of paper. The paintings are not just one canvas.",
+            "You can’t cut them out and roll them up like a set of blueprints.",
+            "It will be time consuming and difficult to cut them all out.",
+            "It’s incomprehensible to me that even if you wanted to steal art you would treat it that way."
+          ]}
+            people={["Conservationalist"]}
+            timeoutDelays={[0, 4000, 4000, 4000, 3000, 5000]}
+            audio={georgia1}
+            endTime={20000} />
+        </div>
+      }
+
+      {showq2 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "13 pieces were stolen. What was stolen? Well in this room, the Dutch Room, a Rembrandt Self Portrait Etching",
+            "A Lady and Gentleman in Black, The Storm on the Sea of Galilee, an ancient chinese beaker, The Obelisk, and The Concert were taken",
+            "The Rembrandt self portrait was also off the wall, but not stolen. The chez tortoni was stolen from the blue room.",
+            "5 pieces by Degas and a gold eagle finial were stolen from the Short Gallery. The ballpark figure on cost is about $200 million."
+
+          ]}
+            people={["Conservationalist"]}
+            timeoutDelays={[0, 6000, 6000, 5000, 8000]}
+            audio={georgia2}
+            endTime={26000} />
+        </div>
+      }
+
+      {showq3 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "There is a secret panel that was slightly ajar. Only employees knew about the door there"
+          ]}
+            people={["Conservationalist"]}
+            timeoutDelays={[0, 4000]}
+            audio={georgia3}
+            endTime={4000} />
+        </div>
+      }
+
+      {showQuestions &&
+        <QuestionBlock title={"What would you like to ask FBI Agent Baker?"}
+          questions={[
+            "Is there anything you can tell me about how the paintings were stolen?",
+            "How many pieces were stolen?",
+            "Is there anything out of place other than the stolen pieces of art?"
+          ]}
+          functions={[
+            clickedq1, clickedq2, clickedq3
+          ]}
+          blockId={"georgia"}
+        />
+      }
 
       <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
 

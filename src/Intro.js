@@ -44,12 +44,12 @@ function Intro() {
             "Get him down here",
             "What’s the matter?",
             "We have some questions",
-            "uhh Randy can you get down here",
-            "sure man, on my way",
-            "Hey don’t I know you, don’t I recognize you? I think there’s a warrant out for your arrest. Can you step out from behind the desk? Up against the wall",
-            "What’s going on here? Everything ok officers?",
-            "Put him up against the wall, pat him down and handcuff him",
-            "put it around his head. make sure his eyes are completely covered",
+            "uhh Randy can you get down here?",
+            "sure uhh, on my way down",
+            "Hey don’t I know you, don’t I recognize that face? I think there’s a warrant out for your arrest. Can you step out from behind the desk please sir? Up against that wall",
+            "What’s going on here? Is everything okay?",
+            "Put him up against the wall",
+            "Put it around his head. Make sure the eyes are completely covered.",
             "Don’t try anything funny and you won’t get hurt. Gentlemen, this is a robbery"
           ]}
           people={["Robber #1", "Rick", "Robber #2", "Rick", "Robber #2", "Rick", "Robber #2", "Rick",

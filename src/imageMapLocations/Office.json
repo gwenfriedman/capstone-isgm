@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "title": "vhs",
+    "shape": "poly",
+    "name": "vhs",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      1479,370,1475,475,1858,491,1855,380
+    ],
+    "polygon": [
+      [
+        1479,370
+      ],
+      [
+        1475,475
+      ],
+      [
+        1858,491
+      ],
+      [
+        1855,380
+      ]
+    ]
+  },
+  {
+    "id": "2",
+    "title": "printout",
+    "shape": "poly",
+    "name": "printout",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      1453,1054,1450,1209,1561,1216,1570,1038
+    ],
+    "polygon": [
+      [
+        1453,1054
+      ],
+      [
+        1450,1209
+      ],
+      [
+        1561,1216
+      ],
+      [
+        1570,1038
+      ]
+    ]
+  },
+  {
+    "id": "3",
+    "title": "frame",
+    "shape": "poly",
+    "name": "frame",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      1523,1963,1406,1868,1963,1586,2432,1963
+    ],
+    "polygon": [
+      [
+        1523,1963
+      ],
+      [
+        1406,1868
+      ],
+      [
+        1963,1586
+      ],
+      [
+        2432,1963
+      ]
+    ]
+  }
+]

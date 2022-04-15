@@ -9,6 +9,7 @@ function PoliceSketches() {
 
     let navigate = useNavigate();
 
+    // TODO: add some kind of interaction here!, maybe just show the images as a placeholder?
     return (
         <div style={{ width: '100%' }}>
 

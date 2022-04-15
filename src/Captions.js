@@ -44,7 +44,7 @@ function Captions({ text, people, timeoutDelays, audio, endTime }) {
         : null
       }
 
-      {/* TODO: restart button? */}
+      {/* TODO: restart button! */}
     </div>
   )
 }

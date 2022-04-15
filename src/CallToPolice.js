@@ -25,7 +25,7 @@ function CallToPolice() {
                 <Captions
                     text={[
                         "911 what’s your emergency?",
-                        "I'm calling from the Gardner Museum, we’ve got big trouble. we’ve got big trouble!",
+                        "I'm calling from the Gardner Museum, we’ve got big trouble. we’ve got big trouble over here!",
                         "I’m sending units now"
                     ]}
                     people={["911 Operator", "Chief of Security", "911 Operator"]}

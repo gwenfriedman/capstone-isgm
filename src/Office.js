@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import office from './images/office.png';
 import ImageMapper from 'react-img-mapper';
-import myData from './imageMapLocations/Blueroom.json';
+import myData from './imageMapLocations/Office.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
@@ -17,15 +17,19 @@ function Office() {
     areas: myData
   };
 
-  //TODO: add new location data!!
-
   const [showChezTortoniModal, setShowChezTortoniModal] = useState(false);
+  const [showVHSModal, setShowVHSModal] = useState(false);
+  const [showPrintoutModal, setShowPrintoutModal] = useState(false);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const openModal = (area) => {
-    if (area.title === "chez") {
+    if (area.title === "frame") {
       setShowChezTortoniModal(true);
+    } else if (area.title === "printout") {
+      setShowPrintoutModal(true);
+    } else if (area.title === "vhs") {
+      setShowVHSModal(true);
     }
   };
 
@@ -55,7 +59,30 @@ function Office() {
           image={chezTortoni}
           closeFunction={setShowChezTortoniModal} />
         : null}
-        
+
+
+      {/* TODO: edit content for this! */}
+      {showVHSModal ?
+        <ArtModal
+          title={"Chez Tortoni"}
+          info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
+          noteworthy={["The only artwork stolen from the first floor"]}
+          value={"Value: Unknown"}
+          image={chezTortoni}
+          closeFunction={setShowVHSModal} />
+        : null}
+
+      {/* TODO: edit content for this! */}
+      {showPrintoutModal ?
+        <ArtModal
+          title={"Chez Tortoni"}
+          info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
+          noteworthy={["The only artwork stolen from the first floor"]}
+          value={"Value: Unknown"}
+          image={chezTortoni}
+          closeFunction={setShowPrintoutModal} />
+        : null}
+
       <div style={{ position: "relative" }} className={showChezTortoniModal ? "overlay" : ""}>
         <ImageMapper
           src={office}

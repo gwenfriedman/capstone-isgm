@@ -37,7 +37,7 @@ function PhoneCall() {
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions
             text={[
-              "You need to get to the Isabella Stuart Gardner Museum immediately. There’s been a robbery. I’m sending another detective to meet you at the scene."
+              "I need you to get to the Isabella Stuart Gardner Museum. We just got a call about a robbery. I’m sending another detective to meet you at the scene."
             ]}
             people={["Police Chief"]}
             timeoutDelays={[0, 10000]}

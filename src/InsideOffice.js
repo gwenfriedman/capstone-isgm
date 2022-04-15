@@ -27,9 +27,9 @@ function InsideOffice() {
             <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
                 <Captions
                     text={[
-                        "Detectives, thanks for coming so quickly. I’m Charles, the chief of security. We just got inside. Something is wrong",
-                        "I haven’t looked around the rest of the museum but I could tell something wasn’t right the moment I got here so I called you right away.",
-                        "There should have been two guards on duty but no one responded when the day shift tried to buzz in this morning.",
+                        "Detectives, thanks for coming so quickly. I’m Charles, chief of security. We just got inside. Something is wrong",
+                        "I haven’t looked around the whole rest of the museum but I could tell something wasn’t right the minute I got inside so I called you right away.",
+                        "There should have been two guards on duty in the museum but no one responded when the day shift tried to buzz in this morning, nobody.",
                         "The office has clearly been broken into and the guards are gone.",
                         "Do you have any idea where the guards could be?",
                         "We haven’t looked yet, they could be in any of the galleries, the courtyard, the tunnels, and we don’t even know if they’re here",
