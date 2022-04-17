@@ -53,15 +53,15 @@ function Rick() {
                 <img src={pic} width={"100%"} />
             </div>
 
-
-            {/* TODO: replace with clip with willard */}
             {showIntro &&
                 <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-                    <Captions text={["My name is Richard Abath", "I’m so glad to be alive right now. I didn’t know how or when anyone would find us."]}
-                        people={["Rick"]}
-                        timeoutDelays={[0, 4000]}
+                    <Captions text={[
+                        "Please state your name for the record",
+                        "Um yeah, my name is Richard Abath. I’m so glad to be alive right now. I didn’t know how or when anyone would find us."]}
+                        people={["Detective Willard", "Rick"]}
+                        timeoutDelays={[0, 3000, 10000]}
                         audio={intro}
-                        endTime={4000} />
+                        endTime={13000} />
                 </div>
             }
 

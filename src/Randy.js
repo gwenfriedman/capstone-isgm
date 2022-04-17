@@ -43,15 +43,13 @@ function Randy() {
                 <img src={pic} width={"100%"} />
             </div>
 
-
-            {/* TODO: replace with clip with willard */}
             {showIntro &&
                 <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-                    <Captions text={["My name is Randy"]}
-                        people={["Rick"]}
-                        timeoutDelays={[0, 3000]}
+                    <Captions text={["Please state your name for the record", "My name is Randy"]}
+                        people={["Detective Willard", "Randy"]}
+                        timeoutDelays={[0, 2000, 2000]}
                         audio={randyIntro}
-                        endTime={3000} />
+                        endTime={4000} />
                 </div>
             }
 

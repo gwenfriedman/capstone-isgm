@@ -68,7 +68,6 @@ function CourtyardFBI() {
         <img src={fbi} width={"100%"} />
       </div>
 
-      {/* TODO: replace with clip with willard */}
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hey, I'm Agent Baker. Let's work together to get this solved."]}
