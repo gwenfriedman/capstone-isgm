@@ -58,13 +58,11 @@ function BlueRoom() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => setShowQuestions(true), 4000)
-  }, [])
-
-  useEffect(() => {
     function handleResize() {
       setScreenWidth(window.innerWidth)
     }
+
+    setTimeout(() => setShowQuestions(true), 4000)
 
     window.addEventListener('resize', handleResize);
 
@@ -75,19 +73,6 @@ function BlueRoom() {
 
   return (
     <div style={{ width: '100%' }}>
-
-      {/* TODO: why is this not showing up? */}
-      {showQuestions &&
-        <QuestionBlock title={"What would you like to ask Steve?"}
-          questions={[
-            "What can you tell me"
-          ]}
-          functions={[
-            clickedq1
-          ]}
-          blockId={"steve"}
-        />
-      }
 
       <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
 
@@ -101,7 +86,7 @@ function BlueRoom() {
           closeFunction={setShowChezTortoniModal} />
         : null}
 
-      <div style={{ position: "relative" }} className={showChezTortoniModal ? "overlay" : ""}>
+      <div style={{ position: "relative", zIndex: 0 }} className={showChezTortoniModal ? "overlay" : ""}>
         <ImageMapper
           src={blueroom}
           width={screenWidth}
@@ -115,7 +100,7 @@ function BlueRoom() {
         />
 
         {showChezTortoni ?
-          <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 1000, position: "absolute", top: 0, zIndex: 1 }} /> : null
+          <img src={hover1} width={window.innerWidth} style={{ pointerEvents: "none", zIndex: 10, position: "absolute", top: 0, zIndex: 1 }} /> : null
         }
       </div>
 
@@ -149,6 +134,20 @@ function BlueRoom() {
             timeoutDelays={[0, 7000, 10000, 9000, 7000, 5000, 9000, 12000, 11000, 4000, 8000]}
             audio={steve1}
             endTime={82000} />
+        </div>
+      }
+            {showQuestions &&
+            <div style={{ zIndex: 100}}>
+        <QuestionBlock title={"What would you like to ask Steve?"}
+          questions={[
+            "What can you tell me"
+          ]}
+          functions={[
+            clickedq1
+          ]}
+          blockId={"steve"}
+          
+        />
         </div>
       }
     </div>

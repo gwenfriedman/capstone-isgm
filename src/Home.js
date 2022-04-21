@@ -17,6 +17,7 @@ function Home() {
         window.addEventListener("mousemove", function () {
             sound.volume = 0.2
             sound.play()
+            sound.loop = true
         })
     }, [])
 

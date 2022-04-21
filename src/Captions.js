@@ -31,7 +31,6 @@ function Captions({ text, people, timeoutDelays, audio, endTime }) {
     setSpeaker(people[index])
     setIndex(index + 1)
   }
-
   return (
     <div>
       {displayCaptions == true ?
@@ -41,10 +40,9 @@ function Captions({ text, people, timeoutDelays, audio, endTime }) {
             <p className={"caption-text"} >{displayParagraph}</p>
           </div>
         </div>
-        : null
+        :
+        <div/>
       }
-
-      {/* TODO: restart button! */}
     </div>
   )
 }

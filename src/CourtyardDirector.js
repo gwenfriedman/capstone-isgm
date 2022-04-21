@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import anne from './images/anne.png';
+import anne from './images/anne.jpg';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import leftArrow from './images/icons/left-arrow.png';

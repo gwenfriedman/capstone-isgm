@@ -28,11 +28,11 @@ function GuardLineup() {
       </div>
 
       <div className='guard-buttons'>
-        <button className='styledButton' onClick={() => clickRick()}>
+        <button className={`styledButton ${(localStorage.getItem("rick") == null) ? "" : "greyOut"}`} onClick={() => clickRick()}>
           Rick
         </button>
 
-        <button className='styledButton' onClick={() => clickRandy()}>
+        <button className={`styledButton ${(localStorage.getItem("randy") == null) ? "" : "greyOut"}`} onClick={() => clickRandy()}>
           Randy
         </button>
       </div>

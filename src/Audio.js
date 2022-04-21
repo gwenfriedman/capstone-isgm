@@ -46,13 +46,13 @@ function Audio() {
           </AudioCaptions> */}
         </div>
 
-        <button className="captionButton" onClick={toggleAudio}>
+        {/* <button className="captionButton" onClick={toggleAudio}>
           <img alt="play/pause" className="captionImage" src=
             {isPlaying ?
               pause :
               play}
           />
-        </button>
+        </button> */}
       </div>
 
       <button className='styledButton'> Enter the crime scene </button>

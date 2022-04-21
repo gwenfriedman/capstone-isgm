@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import src from './images/sketches.png';
 
 import './App.css';
 import './generalStyling.css';
@@ -14,7 +15,7 @@ function PoliceSketches() {
         <div style={{ width: '100%' }}>
 
             <div style={{ position: "relative" }} >
-                {/* <img src={pic} width={"100%"} /> */}
+                <img src={src} width={"100%"} />
             </div>
 
             <button className='styledButton buttonCenter' onClick={() => navigate("/map")}>

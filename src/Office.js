@@ -6,6 +6,8 @@ import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
 import x from './images/x.png';
 import chezTortoni from './images/art/chez-tortoni.jpeg';
+import printout from './images/print-out.jpeg';
+import missing from './images/missing.png';
 
 import './App.css';
 import './generalStyling.css';
@@ -64,26 +66,26 @@ function Office() {
       {/* TODO: edit content for this! */}
       {showVHSModal ?
         <ArtModal
-          title={"Chez Tortoni"}
+          title={"Security Film"}
           info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
           noteworthy={["The only artwork stolen from the first floor"]}
-          value={"Value: Unknown"}
-          image={chezTortoni}
+          // value={"Value: Unknown"}
+          image={missing}
           closeFunction={setShowVHSModal} />
         : null}
 
       {/* TODO: edit content for this! */}
       {showPrintoutModal ?
         <ArtModal
-          title={"Chez Tortoni"}
+          title={"Alarm printout"}
           info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
           noteworthy={["The only artwork stolen from the first floor"]}
-          value={"Value: Unknown"}
-          image={chezTortoni}
+          // value={"Value: Unknown"}
+          image={printout}
           closeFunction={setShowPrintoutModal} />
         : null}
 
-      <div style={{ position: "relative" }} className={showChezTortoniModal ? "overlay" : ""}>
+      <div style={{ position: "relative" }} className={showChezTortoniModal || showPrintoutModal || showVHSModal ? "overlay" : ""}>
         <ImageMapper
           src={office}
           width={screenWidth}

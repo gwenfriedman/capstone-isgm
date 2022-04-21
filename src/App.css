@@ -140,6 +140,7 @@ button {
   margin-left: 30px;
   border-radius: 50%;
   margin-top: 55px;
+  background-color: white;
 }
 
 .caption-container {
@@ -232,4 +233,9 @@ button {
   position: absolute;
   bottom: 0 !important;
   width: 100%;
+}
+
+.greyOut {
+  background-color: rgba(84, 84, 84, 0.70) !important;
+  color: rgba(39,39,39, 0.74) !important;
 }

@@ -21,9 +21,13 @@ const ArtModal = props => {
                     <h4 className='note'>{note}</h4>
                 ))}
 
-                <div className='value'>
-                    <h4> {props.value} </h4>
-                </div>
+                {props.value ?
+                    <div className='value'>
+                        <h4> {props.value} </h4>
+                    </div>
+                    :
+                    <div />
+                }
             </div>
         </div>
     )

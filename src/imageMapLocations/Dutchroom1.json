@@ -1,146 +1,87 @@
 [
-    {
-      "id": "1",
-      "title": "etching-frame",
+  {
+    "id": "1",
+    "title": "etching-frame",
+    "shape": "poly",
+    "name": "etching-frame",
+    "fillColor": "#eab54d4d",
+    "strokeColor": "#ffffff00",
+    "coords": [
+      981,701,965,746,968,758,1055,757,1057,744,1042,700
+    ],
+    "polygon": [
+      [
+        981,701
+      ],
+      [
+        965,746
+      ],
+      [
+        968,758
+      ],
+      [
+        1055,757
+      ],
+      [
+        1057,744
+      ],
+      [
+        1042,700
+      ]
+    ]
+  },
+
+  {
+      "id": "2",
+      "title": "self-portrait-frame",
       "shape": "poly",
-      "name": "etching-frame",
+      "name": "self-portrait-frame",
       "fillColor": "#eab54d4d",
       "strokeColor": "#ffffff00",
       "coords": [
-        2447,1741,2413,1862,2422,1887,2641,1890,2641,1858,2609,1744
+        1146,754,1146,735,1271,626,1432,645,1432,672,1367,784
       ],
       "polygon": [
         [
-          2447,1741
+          1146,754
         ],
         [
-          2413,1862
+          1146,735
         ],
         [
-          2422,1887
+          1271,626
         ],
         [
-          2641,1890
+          1432,645
         ],
         [
-          2641,1858
+          1432,672
         ],
         [
-          2609,1744
+          1367,784
         ]
       ]
     },
-
     {
-        "id": "2",
-        "title": "self-portrait-frame",
-        "shape": "poly",
-        "name": "self-portrait-frame",
-        "fillColor": "#eab54d4d",
-        "strokeColor": "#ffffff00",
-        "coords": [
-          2865,1830,2868,1884,3391,1944,3581,1668,3581,1615,3182,1573
-        ],
-        "polygon": [
-          [
-            2865,1830
-          ],
-          [
-            2868,1884
-          ],
-          [
-            3391,1944
-          ],
-          [
-            3581,1668
-          ],
-          [
-            3581,1615
-          ],
-          [
-            3182,1573
-          ]
-        ]
-      },
-      {
-        "id": "3",
-        "title": "etching",
-        "shape": "rect",
-        "name": "etching",
-        "fillColor": "#ffffff00",
-        "strokeColor": "#ffffff00",
-        "coords": [
-            1358,891,1494,1134
-        ],
-        "polygon": [
-          [
-            1358,891
-          ],
-          [
-            1494,1134
-          ]
-        ]
-      },
-      {
-        "id": "4",
-        "title": "self-portrait",
-        "shape": "rect",
-        "name": "self-portrait",
-        "fillColor": "#ffffff00",
-        "strokeColor": "#ffffff00",
-        "coords": [
-            826,13,1529,516
-        ],
-        "polygon": [
-          [
-            826,13
-          ],
-          [
-            1529,516
-          ]
-        ]
-      },
-      {
-        "id": "5",
-        "title": "person",
-        "shape": "poly",
-        "name": "person",
-        "fillColor": "#ffffff00",
-        "strokeColor": "#ffffff00",
-        "coords": [
-          339,1963,405,1488,627,1333,560,1076,712,772,969,782,1086,1029,1007,1257,1206,1453,1257,1963
-        ],
-        "polygon": [
-          [
-            339,1963
-          ],
-          [
-            405,1488
-          ],
-          [
-            627,1333
-          ],
-          [
-            560,1076
-          ],
-          [
-            712,772
-          ],
-          [
-            969,782
-          ],
-          [
-            1086,1029
-          ],
-          [
-            1007,1257
-          ],
-          [
-            1206,1453
-          ],
-          [
-            1257,1963
-          ]
-        ]
-      }
+      "id": "3",
+      "title": "etching",
+      "shape": "rect",
+      "name": "etching",
+      "fillColor": "#ffffff00",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        546,392,603,488
+      ]
+    },
+    {
+      "id": "4",
+      "title": "self-portrait",
+      "shape": "rect",
+      "name": "self-portrait",
+      "fillColor": "#ffffff00",
+      "strokeColor": "#ffffff00",
+      "coords": [
+        331,4,608,245
+      ]
+    }
 ]
