@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import map from './images/map-final.png'
 import mapText from './images/map-text-final.png'
 
@@ -89,14 +89,17 @@ function Map() {
   const [showExit, setShowExit] = useState(false);
 
   function clickRoom(room) {
-    if (localStorage.getItem("blueroom") != null && localStorage.getItem("courtyard") != null && localStorage.getItem("office") != null
-      && localStorage.getItem("shortgallery1") != null && localStorage.getItem("dutchroom1") != null) {
-      setShowExit(true)
-    }
     localStorage.setItem(room.id, room.id)
     navigate(`/${room.id}`)
   }
 
+  useEffect(() => {
+    if (localStorage.getItem("blueroom") != null && localStorage.getItem("courtyard") != null && localStorage.getItem("office") != null
+      && localStorage.getItem("shortgallery1") != null && localStorage.getItem("dutchroom1") != null) {
+      setShowExit(true)
+    }
+  }, [])
+  
   return (
     <div style={{ position: "relative" }}>
 
@@ -115,7 +118,7 @@ function Map() {
       />
 
       {showExit &&
-        <button className='styledButton buttonCenter' onClick={() => navigate("/exit")}>
+        <button className='styledButton buttonCenter exitButton' onClick={() => navigate("/exit")}>
           Exit
         </button>
       }

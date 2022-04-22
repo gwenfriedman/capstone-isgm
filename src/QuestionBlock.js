@@ -8,7 +8,7 @@ const QuestionBlock = props => {
     );
 
     return (
-        <div className={"question-block"}>
+        <div className={`question-block ${props.blockId == "anne" || props.blockId == "fbi" ? "anne" : ""}`}>
             <h3> {props.title} </h3>
             {questions}
         </div>

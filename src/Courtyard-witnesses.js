@@ -99,7 +99,7 @@ function CourtyardWitnesses() {
       }
 
       <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
-      <img src={leftArrow} alt="left arrow" className='leftArrow' onClick={() => navigate("/courtyard")} />
+      <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
     </div>
 
   )
