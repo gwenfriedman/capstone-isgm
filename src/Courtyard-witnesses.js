@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import witnesses from './images/witnesses.png';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
@@ -61,7 +61,7 @@ function CourtyardWitnesses() {
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hey, I'm Nancy", "and my name's Justin. How can we help?"]}
-            people={["Nancy", "Justin"]}
+            people={["Witness: Nancy", "Witness: Justin"]}
             timeoutDelays={[0, 2000, 2000]}
             audio={intro}
             endTime={4000} />
@@ -78,7 +78,7 @@ function CourtyardWitnesses() {
             "had its running lights on parked right next to the Isabella Stewart Gardner museum. We walked up behind it.",
             "We got up close to it while walking by and we saw two men sitting in the front seat. There was a glare from a street lamp, but I could see the shoulder of a policeman’s uniform."
           ]}
-            people={["Nancy", "Nancy", "Nancy", "Justin", "Justin", "Justin"]}
+            people={["Witness: Nancy", "Witness: Nancy", "Witness: Nancy", "Witness: Justin", "Witness: Justin", "Witness: Justin"]}
             timeoutDelays={[0, 8000, 8000, 5000, 8000, 6000, 12000]}
             audio={audio}
             endTime={47000} />
@@ -91,7 +91,7 @@ function CourtyardWitnesses() {
           <Captions text={[
             "No, neither of those look like the guys I got a really good look at"
           ]}
-            people={["Nancy"]}
+            people={["Witness: Nancy"]}
             timeoutDelays={[0, 4000]}
             audio={nancy}
             endTime={4000} />

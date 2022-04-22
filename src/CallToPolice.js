@@ -28,7 +28,7 @@ function CallToPolice() {
                         "I'm calling from the Gardner Museum, we’ve got big trouble. we’ve got big trouble over here!",
                         "I’m sending units now"
                     ]}
-                    people={["911 Operator", "Chief of Security", "911 Operator"]}
+                    people={["911 Operator", "Chief of Security: Charles Heidorn", "911 Operator"]}
                     timeoutDelays={[0, 6000, 3500, 4000]}
                     audio={policeCallAudio}
                     endTime={13000} />

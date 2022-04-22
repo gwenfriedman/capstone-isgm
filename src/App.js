@@ -27,7 +27,6 @@ import Randy from './Randy';
 import PoliceSketches from './PoliceSketches';
 import Office from './Office';
 import Exit from './Exit';
-import SuspectFiles from './SuspectFiles';
 import React from 'react'
 
 function App() {
@@ -93,7 +92,6 @@ function App() {
             <Route exact path="/policeSketches" element={<PoliceSketches />} />
             <Route exact path="/office" element={<Office />} />
             <Route exact path="/exit" element={<Exit />} />
-            <Route exact path="/suspectFiles" element={<SuspectFiles />} />
           </Route>
         </Routes>
       </AnimatePresence>

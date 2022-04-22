@@ -14,7 +14,7 @@ function ArriveOnScene() {
     const [displayButton, setDisplayButton] = useState(false);
 
     useEffect(() => {
-        setTimeout(() => setDisplayButton(true), 15000)
+        setTimeout(() => setDisplayButton(true), 12000)
     }, [])
 
     return (
@@ -29,9 +29,9 @@ function ArriveOnScene() {
                         "Hey, I’m Detective Willard, I just got here, I haven’t spoken to anyone yet but the chief of security is waiting for us inside."
                     ]}
                     people={["Detective Willard"]}
-                    timeoutDelays={[0, 15000]}
+                    timeoutDelays={[0, 12000]}
                     audio={audio}
-                    endTime={15000} />
+                    endTime={12000} />
             </div>
 
             <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/insideOffice")}>

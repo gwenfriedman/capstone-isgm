@@ -4,10 +4,11 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Office.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import chezTortoni from './images/art/chez-tortoni.jpeg';
 import printout from './images/print-out.jpeg';
 import missing from './images/missing.png';
+import EvidenceModal from './EvidenceModal';
 
 import './App.css';
 import './generalStyling.css';
@@ -62,26 +63,19 @@ function Office() {
           closeFunction={setShowChezTortoniModal} />
         : null}
 
-
-      {/* TODO: edit content for this! */}
       {showVHSModal ?
-        <ArtModal
-          title={"Security Film"}
-          info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
-          noteworthy={["The only artwork stolen from the first floor"]}
-          // value={"Value: Unknown"}
+        <EvidenceModal
+          title={"Security Footage"}
           image={missing}
+          note={"The secruity footage was stolen."}
           closeFunction={setShowVHSModal} />
         : null}
 
-      {/* TODO: edit content for this! */}
       {showPrintoutModal ?
-        <ArtModal
-          title={"Alarm printout"}
-          info={["Oil on canvas - 1875 - Manet", "26 x 34 cm (10 1/4 x 13 3/8 in.)"]}
-          noteworthy={["The only artwork stolen from the first floor"]}
-          // value={"Value: Unknown"}
+        <EvidenceModal
+          title={"Motion Detector Printout"}
           image={printout}
+          note={"The motion detector printout was stolen, but a copy was recoverable on the harddrive."}
           closeFunction={setShowPrintoutModal} />
         : null}
 

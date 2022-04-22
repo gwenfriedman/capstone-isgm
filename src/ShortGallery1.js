@@ -4,7 +4,7 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/ShortGallery1.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import jockey from './images/art/jockey.jpeg';
 import procession from './images/art/procession.jpeg';
 import sortie from './images/art/leaving.jpeg';
@@ -121,7 +121,7 @@ function ShortGallery1() {
 
             {showJockeyModal ?
                 <ArtModal
-                    title={"Three Mounted Jockeys (Jockey à cheval)"}
+                    title={"Three Mounted Jockeys"}
                     info={["Black ink, white, flesh and rose washes, oil pigments on brown paper - 1885-1888 - Degas", "30.5 x 24 cm (12 x 9 7/16 in.)"]}
                     noteworthy={["Partially finished ink drawing with some touches of oil paint"]}
                     value={"Value: Collectively worth under $100,000"}
@@ -131,7 +131,7 @@ function ShortGallery1() {
 
             {showProcessionModal ?
                 <ArtModal
-                    title={"Procession on a Road near Florence (Cortège sur une route aux environs de Florence)"}
+                    title={"Procession on a Road near Florence"}
                     info={["Pencil and sepia wash on paper - 1857-1860 - Degas", "15.6 x 20.6 cm (6 1/8 x 8 1/8 in.)"]}
                     noteworthy={["Depicts a carriage pulled by a pair of horses and a woman holding a large umbrella high above three women who seem to be dancing."]}
                     value={"Value: Collectively worth under $100,000"}
@@ -142,7 +142,7 @@ function ShortGallery1() {
 
             {showSortieModal ?
                 <ArtModal
-                    title={"Leaving the Paddock (La sortie du pesage)"}
+                    title={"Leaving the Paddock"}
                     info={["Watercolor and pencil on paper - 19th century - Degas", "10.5 x 16 cm (4 1/8 x 6 5/16 in.)"]}
                     noteworthy={["Depicts two horses and their jockeys lining up and being led into the track, surrounded by bystanders." , "Changes of position are visible from the pencil drawing."]}
                     value={"Value: Collectively worth under $100,000"}
@@ -154,7 +154,6 @@ function ShortGallery1() {
                 <ArtModal
                     title={"Study for the Programme de la soirée artistique du 15 juin 1884 (Galerie Ponsin) 1"}
                     info={["Black chalk on paper - 1884 - Degas", "24.6 x 31.4 cm (9 11/16 x 12 3/8 in.)"]}
-                    noteworthy={["A square in the lower corner is left blank, presumably the space for information about the soiree"]}
                     value={"Value: Collectively worth under $100,000"}
                     image={study1}
                     closeFunction={setShowStudy1Modal} />
@@ -164,7 +163,6 @@ function ShortGallery1() {
                 <ArtModal
                     title={"Study for the Programme de la soirée artistique du 15 juin 1884 (Galerie Ponsin) 2"}
                     info={["Black chalk on paper - 1884 - Degas", "26.6 x 37.6 cm (10 1/2 x 14 13/16 in.)"]}
-                    noteworthy={["A square in the lower corner is left blank, presumably the space for information about the soiree"]}
                     value={"Value: Collectively worth under $100,000"}
                     image={study2}
                     closeFunction={setShowStudy2Modal} />

@@ -4,7 +4,7 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/ShortGallery2.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import finial from './images/art/finial.jpg';
 
 import leftArrow from './images/icons/left-arrow.png';

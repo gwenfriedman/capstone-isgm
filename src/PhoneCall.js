@@ -28,7 +28,7 @@ function PhoneCall() {
 
   useEffect(() => {
     ring.play()
-    setTimeout(() => setDisplayButton(true), 13000)
+    ring.loop = true
 
     function handleResize() {
       setScreenWidth(window.innerWidth)
@@ -46,7 +46,7 @@ function PhoneCall() {
     if (area.title === "phone") {
       setAnswerPhone(true)
       ring.pause()
-      setTimeout(() => setDisplayButton(true), 13000)
+      setTimeout(() => setDisplayButton(true), 8000)
     }
   }
 
@@ -73,9 +73,9 @@ function PhoneCall() {
               "I need you to get to the Isabella Stewart Gardner Museum. We just got a call about a robbery. I’m sending another detective to meet you at the scene."
             ]}
             people={["Police Chief"]}
-            timeoutDelays={[0, 10000]}
+            timeoutDelays={[0, 8000]}
             audio={call}
-            endTime={10000} />
+            endTime={8000} />
         </div>
       }
     </div>

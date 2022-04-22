@@ -120,9 +120,9 @@ button {
   font-size: 30 !important;
   color: black;
   background-color: white;
-  width: 160px;
   height: 25px;
   padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   margin-left: 15px;
   z-index: 5;
@@ -132,6 +132,8 @@ button {
   outline-style: solid;
   outline-color: black;
   outline-offset: 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .captionButton {
@@ -147,12 +149,6 @@ button {
   display: flex;
   flex-direction: column;
 }
-
-/* .captionImage {
-  height: 25px;
-  text-align: center;
-  margin-top: 4px;
-} */
 
 .screenSizeWarning {
   height: 100vh;
@@ -239,4 +235,16 @@ button {
 .greyOut {
   background-color: rgba(84, 84, 84, 0.70) !important;
   color: rgba(39,39,39, 0.74) !important;
+}
+
+.guard-title {
+  font-size: 20px;
+  text-align: center !important;
+  margin: auto !important;
+  display: block;
+  position: absolute;
+  top: 100px;
+  width: 500px;
+  left: 0;
+  right: 0;
 }

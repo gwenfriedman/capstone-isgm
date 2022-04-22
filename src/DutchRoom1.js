@@ -4,7 +4,7 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom1.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import selfPortrait from './images/art/self-portrait-not-stolen.jpeg';
 import etching from './images/art/etching.jpg';
 import leftArrow from './images/icons/left-arrow.png';
@@ -161,7 +161,7 @@ function DutchRoom1() {
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hello, I'm Georgia. I'm happy to answer any questions."]}
-            people={["Conservationalist"]}
+            people={["Conservationalist: Georgia"]}
             timeoutDelays={[0, 4000]}
             audio={intro}
             endTime={4000} />
@@ -177,7 +177,7 @@ function DutchRoom1() {
             "It will be time consuming and difficult to cut them all out.",
             "It’s incomprehensible to me that even if you wanted to steal art you would treat it that way."
           ]}
-            people={["Conservationalist"]}
+            people={["Conservationalist: Georgia", "Conservationalist: Georgia", "Conservationalist: Georgia", "Conservationalist: Georgia", "Conservationalist: Georgia"]}
             timeoutDelays={[0, 4000, 4000, 4000, 3000, 5000]}
             audio={georgia1}
             endTime={20000} />
@@ -193,7 +193,7 @@ function DutchRoom1() {
             "5 pieces by Degas and a gold eagle finial were stolen from the Short Gallery. The ballpark figure on cost is about $200 million."
 
           ]}
-            people={["Conservationalist"]}
+            people={["Conservationalist: Georgia", "Conservationalist: Georgia", "Conservationalist: Georgia", "Conservationalist: Georgia"]}
             timeoutDelays={[0, 6000, 6000, 5000, 8000]}
             audio={georgia2}
             endTime={26000} />
@@ -205,7 +205,7 @@ function DutchRoom1() {
           <Captions text={[
             "There is a secret panel that was slightly ajar. Only employees knew about the door there"
           ]}
-            people={["Conservationalist"]}
+            people={["Conservationalist: Georgia"]}
             timeoutDelays={[0, 4000]}
             audio={georgia3}
             endTime={4000} />
@@ -213,7 +213,7 @@ function DutchRoom1() {
       }
 
       {showQuestions &&
-        <QuestionBlock title={"What would you like to ask FBI Agent Baker?"}
+        <QuestionBlock title={"What would you like to ask Georgia, an art conservationalist?"}
           questions={[
             "Is there anything you can tell me about how the paintings were stolen?",
             "How many pieces were stolen?",

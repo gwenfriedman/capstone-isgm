@@ -4,7 +4,7 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom4.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import obelisk from './images/art/landscape.jpeg';
 
 import leftArrow from './images/icons/left-arrow.png';
@@ -66,6 +66,7 @@ function DutchRoom4() {
         <div style={{ width: '100%' }}>
 
             {showObeliskModal ?
+                // TODO: redo styling of modal
                 <ArtModal
                     title={"Landscape with an Obelisk"}
                     info={["Oil on oak panel - 1638 - Flinck", "54.5 x 71 cm (21 7/16 x 27 15/16 in.)"]}

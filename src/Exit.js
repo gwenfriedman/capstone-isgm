@@ -12,11 +12,13 @@ function Exit() {
     return (
         <div style={{ width: '100%' }}>
 
+            {/* TODO: add audio! */}
+
             <div style={{ position: "relative" }} >
                 <img src={pic} width={"100%"} />
             </div>
 
-            <button className='styledButton buttonCenter' onClick={() => navigate("/suspectFiles")}>
+            <button className='styledButton buttonCenter' onClick={() => navigate("/about")}>
               Return to station
             </button>
         </div>

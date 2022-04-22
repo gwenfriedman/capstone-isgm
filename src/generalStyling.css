@@ -2,9 +2,10 @@
 
 .mapButton {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 15px;
     z-index: 5;
+    width: 50px;
   }
   
   .leftArrow {
@@ -12,7 +13,7 @@
     bottom: 50%;
     left: 0;
     z-index: 5;
-    width: 70px;
+    width: 50px;
     margin-left: 20px;
   }
   
@@ -21,6 +22,11 @@
     bottom: 50%;
     right: 0;
     z-index: 5;
-    width: 70px;
+    width: 50px;
     margin-right: 20px;
+  }
+
+  .back {
+    top: 10% !important;
+    width: 50px;
   }

@@ -22,7 +22,7 @@ function Rick() {
     const [showQuestions, setShowQuestions] = useState(false);
 
     useEffect(() => {
-        setTimeout(() => setShowQuestions(true), 4000)
+        setTimeout(() => setShowQuestions(true), 13000)
     }, [])
 
     function clickedq1() {
@@ -68,7 +68,7 @@ function Rick() {
             {showq1 &&
                 <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
                     <Captions text={[
-                        "Yeah, of course. Um so I was just doing rounds and I heard a fire alarm go off at around 12:45am-ish. I shut it off. After that I went down and relieved Randy from his desk.",
+                        "Yeah, of course. So I was doing rounds and I heard a fire alarm go off at around 12:45am-ish. I shut it off. After that I went down and relieved Randy from his desk.",
                         "I saw on the security camera what looked like two police officers standing outside.",
                         "They came to the door and rang the bell and they said uhh Boston Police we’ve got a report of a disturbance on the premises. You know, I buzzed them in.",
                         "Then, They asked me if I was alone and I said that no, my partner was off doing rounds. They said get him down here.",
@@ -81,8 +81,8 @@ function Rick() {
                         "And they handcuffed me to the electrical box for hours. At first I was panicking, and then I started singing 'I Shall Be Released' by Bob Dylan.",
                         "I don't know how long I was singing that damn song for, but it was quite a bit of time."
                     ]}
-                        people={["Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick"]}
-                        timeoutDelays={[0, 14000, 6000, 9000, 8000, 10000, 8000, 8000, 9000, 9000, 8000, 9000, 10000]}
+                        people={["Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick", "Rick"]}
+                        timeoutDelays={[0, 14000, 6000, 10000, 8000, 10500, 8000, 8000, 9000, 9000, 8000, 9000, 10000]}
                         audio={rick2}
                         endTime={109000} />
                 </div>
@@ -106,7 +106,7 @@ function Rick() {
                         "I talk about the security system sucking and us being in danger all the time.",
                         "We're all bitching about the security in this place. All the guards knew there was only 1 alarm.",
                         "I don’t know how the robbers knew so much about the museum’s security"]}
-                        people={["Rick", "Rick"]}
+                        people={["Rick", "Rick", "Rick"]}
                         timeoutDelays={[0, 5000, 5000, 5000]}
                         audio={rick4}
                         endTime={14000} />
@@ -127,7 +127,7 @@ function Rick() {
                 />
             }
 
-            <img src={leftArrow} alt="left arrow" className='leftArrow' onClick={() => navigate("/guardLineup")} />
+            <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/guardLineup")} />
         </div>
 
     )

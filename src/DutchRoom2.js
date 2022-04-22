@@ -4,7 +4,7 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Dutchroom2.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 
 import hover1 from './images/dutchroom/dutch2a.png';
 import hover2 from './images/dutchroom/dutch2b.png';

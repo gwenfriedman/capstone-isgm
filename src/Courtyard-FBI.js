@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import fbi from './images/baker.png';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
@@ -71,7 +71,7 @@ function CourtyardFBI() {
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hey, I'm Agent Baker. Let's work together to get this solved."]}
-            people={["FBI Agent"]}
+            people={["FBI Agent Baker"]}
             timeoutDelays={[0, 5000]}
             audio={intro}
             endTime={5000} />
@@ -93,7 +93,8 @@ function CourtyardFBI() {
             "The chinese artifact is old and somewhat valuable, but not even close to some of the items of art just in that room.",
             "Was it a diversion? Art is easy to smuggle and use as an international currency"
           ]}
-            people={["FBI Agent"]}
+            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", 
+            "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 7000, 5000, 5000, 4000, 5000, 5000, 6000, 4000, 8000, 7000, 8000]}
             audio={baker1}
             endTime={63000} />
@@ -114,7 +115,8 @@ function CourtyardFBI() {
             "It’s strange that they taped all around Rick’s heard. Why not just tape around his eyes?",
             "Why weren’t they killed? dead men tell no tales"
           ]}
-            people={["FBI Agent"]}
+            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker",
+            "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 6000, 5000, 5000, 7000, 4000, 7000, 5000, 7000, 6000, 5000]}
             audio={baker2}
             endTime={57000} />
@@ -131,7 +133,7 @@ function CourtyardFBI() {
             "with an etching that isn’t even that expensive? and waste precious moments unscrewing the frame.",
             "They were in the museum for 81 minutes, they must have known the police weren’t coming."
           ]}
-            people={["FBI Agent"]}
+            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 6000, 6000, 5000, 6000, 6000, 6000]}
             audio={baker3}
             endTime={35000} />
@@ -145,7 +147,7 @@ function CourtyardFBI() {
             "St Patrick’s day in Boston is a drinking day, you know. Boston has its parade on Sunday, not the 17th.",
             "The parade is in South Boston and it attracts an enormous police presence. Leaving the area near the museum quiet."
           ]}
-            people={["FBI Agent"]}
+            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 5000, 7000, 9000]}
             audio={baker4}
             endTime={20000} />

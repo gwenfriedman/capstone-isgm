@@ -10,16 +10,21 @@ const ArtModal = props => {
             </div>
 
             <div className='info'>
-                <img src={x} alt='painting' className='closeButton' onClick={() => props.closeFunction(false)} />
+                <img src={x} alt='close' className='closeButton' onClick={() => props.closeFunction(false)} />
                 <h2 style={{ width: "250px", marginBottom: "40px" }}> {props.title} </h2>
 
                 {props.info.map(i => (
                     <h4 className='note'>{i}</h4>
                 ))}
-                <h4> Noteworthy: </h4>
-                {props.noteworthy.map(note => (
-                    <h4 className='note'>{note}</h4>
-                ))}
+
+                {props.noteworthy &&
+                    <div>
+                        <h4> Noteworthy: </h4>
+                        {props.noteworthy.map(note => (
+                            <h4 className='note'>{note}</h4>
+                        ))}
+                    </div>
+                }
 
                 {props.value ?
                     <div className='value'>

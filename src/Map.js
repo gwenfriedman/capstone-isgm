@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import map from './images/map-final.png'
 import mapText from './images/map-text-final.png'
 
@@ -6,7 +6,7 @@ import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
 
 function Map() {
-  
+
   var mapData = [
     {
       "id": "dutchroom1",
@@ -17,7 +17,7 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        513,323,766,668
+        513, 323, 766, 668
       ],
       "preFillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675',
       "fillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675'
@@ -31,7 +31,7 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        1409,820,1678,899
+        1409, 820, 1678, 899
       ],
       "preFillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075',
       "fillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075'
@@ -45,7 +45,7 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        1988,655,2153,731
+        1988, 655, 2153, 731
       ],
       "preFillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375',
       "fillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375'
@@ -59,7 +59,7 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        2197,766,2720,1127
+        2197, 766, 2720, 1127
       ],
       "preFillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75',
       "fillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75'
@@ -73,7 +73,7 @@ function Map() {
       "strokeColor": "black",
 
       "coords": [
-        2868,1029,3039,1219
+        2868, 1029, 3039, 1219
       ],
       "preFillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75',
       "fillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75'
@@ -86,7 +86,13 @@ function Map() {
     areas: mapData
   };
 
+  const [showExit, setShowExit] = useState(false);
+
   function clickRoom(room) {
+    if (localStorage.getItem("blueroom") != null && localStorage.getItem("courtyard") != null && localStorage.getItem("office") != null
+      && localStorage.getItem("shortgallery1") != null && localStorage.getItem("dutchroom1") != null) {
+      setShowExit(true)
+    }
     localStorage.setItem(room.id, room.id)
     navigate(`/${room.id}`)
   }
@@ -94,7 +100,7 @@ function Map() {
   return (
     <div style={{ position: "relative" }}>
 
-      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }}>
+      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }} className={showExit ? "overlay" : ""}>
         <ImageMapper src={map}
           map={MAP} responsive={true} parentWidth={window.innerWidth}
           onClick={(area) => clickRoom(area)} stayMultiHighlighted={true}
@@ -108,11 +114,11 @@ function Map() {
         style={{ position: "relative", top: 0, left: 0, zIndex: 2, pointerEvents: 'none' }}
       />
 
-      {/* <button onClick={() => { localStorage.clear() }}> Clear </button> */}
-
-      <button className='styledButton' onClick={() => navigate("/exit")}>
+      {showExit &&
+        <button className='styledButton buttonCenter' onClick={() => navigate("/exit")}>
           Exit
-      </button>
+        </button>
+      }
 
     </div>
   )

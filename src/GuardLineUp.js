@@ -27,6 +27,8 @@ function GuardLineup() {
         <img src={pic} width={"100%"} />
       </div>
 
+      <p className='guard-title'> Who would you like to question? </p>
+
       <div className='guard-buttons'>
         <button className={`styledButton ${(localStorage.getItem("rick") == null) ? "" : "greyOut"}`} onClick={() => clickRick()}>
           Rick

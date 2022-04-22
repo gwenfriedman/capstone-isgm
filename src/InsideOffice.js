@@ -35,8 +35,9 @@ function InsideOffice() {
                         "We haven’t looked yet, they could be in any of the galleries, the courtyard, the tunnels, and we don’t even know if they’re here",
                         "Let’s start with the tunnels. Can you point us in the right direction?"
                     ]}
-                    people={["Chief of Security", "Chief of Security", "Chief of Security", "Chief of Security", "Detective Willard", "Chief of Security", "Detective Willard"]}
-                    timeoutDelays={[0, 11000, 10000, 8000, 4000, 4500, 7000, 3000]}
+                    people={["Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn",
+                     "Detective Willard", "Chief of Security: Charles Heidorn", "Detective Willard"]}
+                    timeoutDelays={[0, 11500, 9500, 7500, 3500, 4500, 7000, 3000]}
                     audio={audio} endTime={47000} />
             </div>
 

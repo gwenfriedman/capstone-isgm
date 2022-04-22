@@ -4,12 +4,13 @@ import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Blueroom.json';
 import ArtModal from './ArtModal';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import chezTortoni from './images/art/chez-tortoni.jpeg';
 import Captions from './Captions';
 import QuestionBlock from './QuestionBlock';
 import steveIntro from './audio/steve/steve-intro.mp3';
 import steve1 from './audio/steve/steve1.mp3';
+import steve2 from './audio/steve/steve2.mp3';
 
 import hover1 from './images/blueroom1a.png';
 
@@ -28,6 +29,7 @@ function BlueRoom() {
 
   const [showIntro, setShowIntro] = useState(true);
   const [showq1, setShowq1] = useState(false);
+  const [showq2, setShowq2] = useState(false);
   const [showQuestions, setShowQuestions] = useState(false);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -52,6 +54,13 @@ function BlueRoom() {
 
   function clickedq1() {
     setShowq1(true)
+    setShowq2(false)
+    setShowIntro(false)
+  }
+
+  function clickedq2() {
+    setShowq2(true)
+    setShowq1(false)
     setShowIntro(false)
   }
 
@@ -128,26 +137,43 @@ function BlueRoom() {
             "Then there’s an alarm in the little salon again. That is curious to me. There seems to be a gap in the alarms from 2:15 - 2:23.",
             "A that's a period of approximately 8 minutes. At 2:28am there’s another 12 minute gap until 2:40am.",
             "It appears there were no alarms triggered on the first floor while the thieves were inside the museum.",
-            "That includes in the Blue Room, the room we’re in now where the Chez Tortoni was taken from."
+            "That includes in the Blue Room, the room we’re in right now where the Chez Tortoni was taken from.",
+            "The thieves were inside the museum for 81 minutes and they didn’t trigger an alarm for 48 of those minutes."
           ]}
-            people={["Security Expert"]}
-            timeoutDelays={[0, 7000, 10000, 9000, 7000, 5000, 9000, 12000, 11000, 4000, 8000]}
+            people={["Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller",
+            "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller", "Security Expert: Steve Keller"]}
+            timeoutDelays={[0, 7000, 10000, 9000, 7000, 5000, 9000, 12000, 11000, 4000, 8000, 9000]}
             audio={steve1}
-            endTime={82000} />
+            endTime={91000} />
         </div>
       }
-            {showQuestions &&
-            <div style={{ zIndex: 100}}>
-        <QuestionBlock title={"What would you like to ask Steve?"}
-          questions={[
-            "What can you tell me"
+
+      {showq2 &&
+        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+          <Captions text={[
+            "It’s very possible there was a power glitch based on the fire alarm going off a few hours beforehand.",
+            "According to the print outs, the last person in this room was Richard. Some employees have told me that the motion detectors worked, but they weren’t 100% reliable."
           ]}
-          functions={[
-            clickedq1
-          ]}
-          blockId={"steve"}
-          
-        />
+            people={["Security Expert: Steve Keller", "Security Expert: Steve Keller"]}
+            timeoutDelays={[0, 7000, 10000]}
+            audio={steve2}
+            endTime={17000} />
+        </div>
+      }
+      {showQuestions &&
+        <div style={{ zIndex: 100 }}>
+          <QuestionBlock title={"What would you like to ask Steve?"}
+            questions={[
+              "Can you walk us through what the motion detectors picked up?",
+              "Do you think the alarms were working as expected?"
+            ]}
+            functions={[
+              clickedq1,
+              clickedq2
+            ]}
+            blockId={"steve"}
+
+          />
         </div>
       }
     </div>

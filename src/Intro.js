@@ -35,7 +35,7 @@ function Intro() {
 
       <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
         <Captions
-          text={["Boston Police, we got a report of a disturbance on the premises",
+          text={["Boston Police, we got a report here of a disturbance on the premises",
             "What’s the matter officer? Is there something wrong?",
             "Open the gate, we got a report of a disturbance on the premises",
             "We haven’t seen anything in here, but you’re welcome to come take a look",
@@ -54,7 +54,7 @@ function Intro() {
           ]}
           people={["Robber #1", "Rick", "Robber #2", "Rick", "Robber #2", "Rick", "Robber #2", "Rick",
             "Robber #2", "Rick", "Randy", "Robber #1", "Randy", "Robber #2", "Robber #1", "Robber #2"]}
-          timeoutDelays={[0, 6000, 3500, 4000, 8000, 3000, 3000, 2000, 1000, 2000, 7000, 3000, 13000, 2000, 3000, 5000, 9000]}
+          timeoutDelays={[0, 6000, 3500, 4000, 8000, 3000, 3000, 2000, 1000, 1500, 7000, 3000, 13000, 2000, 2500, 4500, 9000]}
           audio={introAudio} 
           endTime={70000} />
       </div>

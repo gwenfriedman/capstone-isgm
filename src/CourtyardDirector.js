@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import anne from './images/anne.jpg';
 import { useNavigate } from "react-router-dom";
-import x from './images/x.png';
+import x from './images/icons/map.png';
 import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
@@ -60,7 +60,7 @@ function CourtyardDirector() {
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hello there. I'm Anne Hawley, the director of the museum. What do you need?"]}
-            people={["Anne Hawley"]}
+            people={["Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 7000]}
             audio={intro}
             endTime={7000} />
@@ -77,7 +77,8 @@ function CourtyardDirector() {
             "that the collection should be crated and shipped to Paris for auction.",
             "and Harvard University would get the proceeds."
           ]}
-            people={["Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley", "Anne Hawley"]}
+            people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", 
+            "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 9000, 7000, 7000, 8000, 5000, 4000]}
             audio={anne1}
             endTime={40000} />
@@ -95,7 +96,8 @@ function CourtyardDirector() {
             "I really just have to operate under the assumption that the paintings will be returned.",
             "We are a world class musuem, they have to be."
           ]}
-            people={["Anne Hawley", "Anne Hawley"]}
+            people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley",
+            "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 3000, 10000, 6000, 6000, 6000, 4000, 4000]}
             audio={anne2}
             endTime={41000} />
@@ -111,7 +113,7 @@ function CourtyardDirector() {
             "Oh and a sewer pipe backed up into one of the galleries. Sewage was coming in the middle of the gallery.",
             "We don't have time to worry about theft"
           ]}
-            people={["Anne Hawley", "Anne Hawley"]}
+            people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 5000, 7000, 7000, 7000, 4000]}
             audio={anne3}
             endTime={29000} />
