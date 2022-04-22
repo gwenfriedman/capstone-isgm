@@ -28,71 +28,11 @@ import PoliceSketches from './PoliceSketches';
 import Office from './Office';
 import Exit from './Exit';
 import SuspectFiles from './SuspectFiles';
-import React, { useEffect, useState } from 'react'
-
-// import arriveonscene from './images/arriveonscene.png'
-// import blueroom1 from './images/blueroom1.png'
-// import dutch1a from './images/dutchroom/dutch1a.png';
+import React from 'react'
 
 function App() {
 
   const location = useLocation();
-
-//   const [imgsLoaded, setImgsLoaded] = useState(false)
-
-//   const IMAGES = [
-//     arriveonscene,
-//     blueroom1,
-//     dutch1a
-//   ];
-
-
-// function importAll(r) {
-//   let images = {};
-//   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-//   return images;
-// }
-
-// const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
-
-
-  // function loadImages(images) {
-    //TODO: this!
-
-    //something with promise.all
-    //change state in then so that the gif stops and website opens
-    //include pics + audio
-  // }
-
-  // useEffect(() => {
-  //   // loadImages(images)
-
-
-  // }, []);
-
-  // useEffect(() => {
-  //   const loadImage = image => {
-  //     return new Promise((resolve, reject) => {
-  //       const loadImg = new Image()
-  //       loadImg.src = image
-  //       // wait 2 seconds to simulate loading time
-  //       loadImg.onload = () =>
-  //         setTimeout(() => {
-  //           resolve(image)
-  //         }, 2000)
-
-  //       loadImg.onerror = err => reject(err)
-  //     })
-  //   }
-
-  //   Promise.all(IMAGES.map(image => loadImage(image)))
-  //     .then(() => {
-  //       setImgsLoaded(true)
-  //       console.log("loaded!")
-  //     })
-  //     .catch(err => console.log("Failed to load images", err))
-  // }, [])
-
   const Wrapper = () => {
     return (
       <motion.div
