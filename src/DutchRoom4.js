@@ -66,14 +66,14 @@ function DutchRoom4() {
         <div style={{ width: '100%' }}>
 
             {showObeliskModal ?
-                // TODO: redo styling of modal
                 <ArtModal
                     title={"Landscape with an Obelisk"}
                     info={["Oil on oak panel - 1638 - Flinck", "54.5 x 71 cm (21 7/16 x 27 15/16 in.)"]}
                     noteworthy={["Was formerly thought to be created by to Rembrandt, but was actually created by his pupil Flinck"]}
                     value={"Value: $10 million"}
                     image={obelisk}
-                    closeFunction={setShowObeliskModal} />
+                    closeFunction={setShowObeliskModal}
+                    name={"obelisk"}/>
                 : null}
 
             <div style={{ position: "relative" }} className={showObeliskModal ? "overlay" : ""}>

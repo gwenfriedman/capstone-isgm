@@ -60,6 +60,7 @@ function Office() {
           noteworthy={["The only artwork stolen from the first floor"]}
           value={"Value: Unknown"}
           image={chezTortoni}
+          name={"chez"}
           closeFunction={setShowChezTortoniModal} />
         : null}
 

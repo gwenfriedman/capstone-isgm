@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import anne from './images/anne.jpg';
 import { useNavigate } from "react-router-dom";
-import x from './images/icons/map.png';
 import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
@@ -56,7 +55,6 @@ function CourtyardDirector() {
         <img src={anne} width={"100%"} />
       </div>
 
-      {/* TODO: replace with clip with willard */}
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hello there. I'm Anne Hawley, the director of the museum. What do you need?"]}
@@ -135,7 +133,6 @@ function CourtyardDirector() {
         />
       }
 
-      <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
       <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
     </div>
 

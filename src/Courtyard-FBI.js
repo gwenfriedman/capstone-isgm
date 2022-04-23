@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import fbi from './images/baker.png';
 import { useNavigate } from "react-router-dom";
-import x from './images/icons/map.png';
 import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
@@ -168,9 +167,6 @@ function CourtyardFBI() {
           blockId={"fbi"}
         />
       }
-
-      <img src={x} alt="map icon" className='mapButton' onClick={() => navigate("/map")} />
-
       <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
     </div>
 

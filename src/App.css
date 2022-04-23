@@ -35,6 +35,65 @@
        url('/public/fonts/JMH\ Typewriter-Black.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
+.about-page {
+  background-image: url('./images/homescreen.png');
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-frame {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-frame-1 {
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.about-text-1 {
+  width: 350px;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-top: -275px;
+  text-align: center;
+}
+
+.about-text-2 {
+  width: 350px;
+  color: white;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.about-carrot {
+  width: 20px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.frames {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: 'Typewriter';
 }
@@ -159,8 +218,23 @@ button {
   z-index: 1000;
 }
 
-@media only screen and (min-width: 1000px) {
+.about-button {
+  color: white;
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  text-decoration: underline;
+  cursor: default;
+}
+
+@media only screen and (min-width: 1300px) {
   .screenSizeWarning {
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .about-page {
       display: none;
   }
 }
@@ -207,11 +281,21 @@ button {
 .text-block {
   color: white;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 450px;
-  padding: 20px;
-  background-color: #00000066;
+  text-align: center;
+}
+
+.sub-block {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .buttonTransition {

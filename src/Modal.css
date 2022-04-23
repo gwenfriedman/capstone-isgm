@@ -13,6 +13,23 @@
     z-index: 100;
 }
 
+.chez .value {
+    margin-top: 20px;
+}
+
+.short .value {
+    width: 400px;
+    margin-top: 40px;
+}
+
+.obelisk {
+    height: 400px;
+}
+
+.obelisk .value {
+    margin-top: 20px;
+}
+
 .evidence {
     display: flex;
     flex-direction: column;

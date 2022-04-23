@@ -126,17 +126,18 @@ function ShortGallery1() {
                     noteworthy={["Partially finished ink drawing with some touches of oil paint"]}
                     value={"Value: Collectively worth under $100,000"}
                     image={jockey}
-                    closeFunction={setShowJockeyModal} />
+                    closeFunction={setShowJockeyModal}
+                    name={"short"}/>
                 : null}
 
             {showProcessionModal ?
                 <ArtModal
                     title={"Procession on a Road near Florence"}
                     info={["Pencil and sepia wash on paper - 1857-1860 - Degas", "15.6 x 20.6 cm (6 1/8 x 8 1/8 in.)"]}
-                    noteworthy={["Depicts a carriage pulled by a pair of horses and a woman holding a large umbrella high above three women who seem to be dancing."]}
                     value={"Value: Collectively worth under $100,000"}
                     image={procession}
-                    closeFunction={setShowProcessionModal} />
+                    closeFunction={setShowProcessionModal}
+                    name={"short"}/>
                 : null}
 
 
@@ -144,27 +145,29 @@ function ShortGallery1() {
                 <ArtModal
                     title={"Leaving the Paddock"}
                     info={["Watercolor and pencil on paper - 19th century - Degas", "10.5 x 16 cm (4 1/8 x 6 5/16 in.)"]}
-                    noteworthy={["Depicts two horses and their jockeys lining up and being led into the track, surrounded by bystanders." , "Changes of position are visible from the pencil drawing."]}
                     value={"Value: Collectively worth under $100,000"}
                     image={sortie}
+                    name={"short"}
                     closeFunction={setShowSortieModal} />
                 : null}
 
             {showStudy1Modal ?
                 <ArtModal
-                    title={"Study for the Programme de la soirée artistique du 15 juin 1884 (Galerie Ponsin) 1"}
+                    title={"Study for the Programme de la soirée artistique du 15 juin 1884 1"}
                     info={["Black chalk on paper - 1884 - Degas", "24.6 x 31.4 cm (9 11/16 x 12 3/8 in.)"]}
                     value={"Value: Collectively worth under $100,000"}
                     image={study1}
+                    name={"short"}
                     closeFunction={setShowStudy1Modal} />
                 : null}
 
             {showStudy2Modal ?
                 <ArtModal
-                    title={"Study for the Programme de la soirée artistique du 15 juin 1884 (Galerie Ponsin) 2"}
+                    title={"Study for the Programme de la soirée artistique du 15 juin 1884 2"}
                     info={["Black chalk on paper - 1884 - Degas", "26.6 x 37.6 cm (10 1/2 x 14 13/16 in.)"]}
                     value={"Value: Collectively worth under $100,000"}
                     image={study2}
+                    name={"short"}
                     closeFunction={setShowStudy2Modal} />
                 : null}
 

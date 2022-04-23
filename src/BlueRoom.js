@@ -92,7 +92,8 @@ function BlueRoom() {
           noteworthy={["The only artwork stolen from the first floor"]}
           value={"Value: Unknown"}
           image={chezTortoni}
-          closeFunction={setShowChezTortoniModal} />
+          closeFunction={setShowChezTortoniModal}
+          name={"chez"}/>
         : null}
 
       <div style={{ position: "relative", zIndex: 0 }} className={showChezTortoniModal ? "overlay" : ""}>

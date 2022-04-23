@@ -157,7 +157,6 @@ function DutchRoom1() {
         }
       </div>
 
-      {/* TODO: replace with clip with willard */}
       {showIntro &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions text={["Hello, I'm Georgia. I'm happy to answer any questions."]}

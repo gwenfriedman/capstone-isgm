@@ -70,7 +70,8 @@ function ShortGallery2() {
                     noteworthy={["The decorative top of a flagpole to which was attached a silk flag from Napoleon’s First Regiment of Imperial Guard."]}
                     value={"Value: Unknown"}
                     image={finial}
-                    closeFunction={setShowFinialModal} />
+                    closeFunction={setShowFinialModal}
+                    name={"chez"}/>
                 : null}
 
             <div style={{ position: "relative" }} className={showFinialModal ? "overlay" : ""}>

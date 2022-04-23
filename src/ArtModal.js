@@ -4,7 +4,7 @@ import './Modal.css';
 
 const ArtModal = props => {
     return (
-        <div className={"modal"}>
+        <div className={`modal ${props.name}`}>
             <div className='image-wrapper'>
                 <img className='modal-image' src={props.image} alt='seascape' />
             </div>
