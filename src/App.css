@@ -43,6 +43,14 @@
   background-size: cover;
 }
 
+.about-page-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+
 .home-frame {
   position: absolute;
   top: 45%;
@@ -54,6 +62,51 @@
   display: block;
   margin: auto;
   padding-top: 100px;
+}
+
+.about-frame-2 p {
+  margin-top: -130px;
+  width: 150px;
+  margin-left: 20px;
+}
+
+.about-frame-3 {
+  margin-top: 200px;
+}
+
+.about-frame-5 {
+  margin-top: 50px;
+}
+
+.about-frame-3 img {
+  width: 300px;
+}
+
+.about-frame-4 img {
+  width: 270px;
+}
+
+.about-frame-5 img {
+  width: 400px;
+}
+
+.about-frame-3 p {
+  margin-top: -160px;
+  width: 250px;
+  margin-left: 25px;
+}
+
+.about-frame-4 p {
+  margin-top: -220px;
+  width: 150px;
+  margin-left: 60px;
+}
+
+.about-frame-5 p {
+  margin-top: -200px;
+  width: 300px;
+  margin-left: 50px;
+  color: black;
 }
 
 .about-text-1 {
@@ -74,11 +127,47 @@
   margin-top: 200px;
 }
 
+.about-text-3 {
+  width: 350px;
+  color: white;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 200px;
+
+  font-size: 25px;
+}
+
 .about-carrot {
   width: 20px;
   display: block;
   margin: auto;
   margin-top: 20px;
+}
+
+.about-frame-6 img {
+  padding-top: 300px;
+  display: block;
+  margin: auto;
+}
+
+.about-paragraph {
+  margin-top: 100px !important;
+  width: 600px;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.liam {
+  color: black !important;
+}
+
+.actors {
+  text-align: center;
+  margin-top: -410px;
 }
 
 .frames {
@@ -92,6 +181,7 @@
 .bio {
   display: flex;
   flex-direction: column;
+  margin-top: -50px !important;
 }
 
 body {
@@ -225,6 +315,10 @@ button {
   right: 45px;
   text-decoration: underline;
   cursor: default;
+}
+
+.about-page-button {
+
 }
 
 @media only screen and (min-width: 1300px) {

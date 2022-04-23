@@ -39,7 +39,7 @@ function About() {
 
       {/* view 2 */}
 
-      <p className='about-text-2'> HUGE THANK YOU TO </p>
+      <p className='about-text-3'> HUGE THANK YOU TO </p>
 
       <div className='frames'>
 
@@ -51,7 +51,7 @@ function About() {
         <div className='about-frame-3'>
           <img className={""} src={frame3} />
           <p> Isabella Stewart <br />
-            Gardner Museum, Boston <br />
+            Gardner Museum, Boston <br /> 
             www.gardnermuseum.org</p>
         </div>
 
@@ -76,6 +76,7 @@ function About() {
 
       <div className='about-frame-6'>
         <img className={""} src={frame6} />
+        <div className={"actors"}>
         <p> Voice Actors </p>
         <p>
           Robin Taylor <br />
@@ -92,57 +93,59 @@ function About() {
           Cayla Chow <br />
           Gwen Friedman
         </p>
+        </div>
       </div>
 
       {/* view 4 */}
 
-      <p className='about-text-2'> WHO WE ARE </p>
+      <p className='about-text-3'> WHO WE ARE </p>
 
       <div className='frames'>
 
         <div className='bio'>
           <img className={""} src={gwen} />
-          <p> Gwen Friedman</p>
-          <p> Developer </p>
+          <p> Gwen Friedman <br/> Developer</p>
           <p> Senior, Northeastern University <br/> Computer Science + Design </p>
         </div>
 
         <div className='bio'>
           <img className={""} src={cayla} />
-          <p> Cayla Chow</p>
-          <p> Designer </p>
+          <p> Cayla Chow <br/> Designer</p>
           <p> Senior, Northeastern University <br/> Experience Design </p>
         </div>
 
-        <div className='bio'>
+        <div className='bio liam'>
           <img className={""} src={liam} />
-          <p> Liam Scott </p>
-          <p> Illustrator </p>
+          <p> Liam Scott <br/> Illustrator</p>
           <p> Freshman, Northeastern University <br/> Architecture + Design </p>
         </div>
       </div>
 
 
-      {/* view 4 */}
+      {/* view 5 */}
 
-      <p className='about-text-2'> WHAT THIS IS </p>
+      <p className='about-text-3'> WHAT THIS IS </p>
+      
 
-      <p style={{width: "600px", margin: "auto", textAlign: "center"}}>
-      This project began as a desire to create an experience. In hopes of diving into an interdisciplinary 
-      project that would combine our specialties, we began searching for a story that could be interactive, 
-      decisive and immersive. Right down the street from our apartment, the Isabella Stewart Gardner Museum 
-      has been an icon to the city of Boston for many years. In our last year at Northeastern University, an 
-      homage to our home for the past five years, this online experience is meant to engage the user deeper 
-      into the Isabella Stewart Gardner Museum heist in hopes of adding to the conversation to help bring 
-      the works home. 
-      </p>
+      <div className='about-page-end'>
 
-      <button className='styledButton' onClick={() => {
-        localStorage.clear()
-        navigate("/")
-      }}>
-        Start over
-      </button>
+        <p className={"about-paragraph"}>
+        This project began as a desire to create an experience. In hopes of diving into an interdisciplinary 
+        project that would combine our specialties, we began searching for a story that could be interactive, 
+        decisive and immersive. Right down the street from our apartment, the Isabella Stewart Gardner Museum 
+        has been an icon to the city of Boston for many years. In our last year at Northeastern University, an 
+        homage to our home for the past five years, this online experience is meant to engage the user deeper 
+        into the Isabella Stewart Gardner Museum heist in hopes of adding to the conversation to help bring 
+        the works home. 
+        </p>
+
+        <button className='styledButton' onClick={() => {
+          localStorage.clear()
+          navigate("/")
+        }}>
+          Start over
+        </button>
+      </div>
     </div>
 
   )
