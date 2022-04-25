@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import map from './images/map-final.png'
-import mapText from './images/map-text-final.png'
+import map from './images/map-final.png';
+import mapText from './images/map-text-final.png';
+import x from './images/x.png';
 
 import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
 
+import './App.css';
+
 function Map() {
 
-  //TODO: make fade more extreme
   var mapData = [
     {
       "id": "dutchroom1",
@@ -20,8 +22,8 @@ function Map() {
       "coords": [
         513, 323, 766, 668
       ],
-      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B7666',
-      "fillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B7666'
+      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B764D',
+      "fillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B764D'
     },
     {
       "id": "shortgallery1",
@@ -34,8 +36,8 @@ function Map() {
       "coords": [
         1409, 820, 1678, 899
       ],
-      "preFillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075',
-      "fillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC550075'
+      "preFillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC55004D',
+      "fillColor": localStorage.getItem("shortgallery1") == null ? '#CC5500' : '#CC55004D'
     },
     {
       "id": "office",
@@ -48,8 +50,8 @@ function Map() {
       "coords": [
         1988, 655, 2153, 731
       ],
-      "preFillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375',
-      "fillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD375'
+      "preFillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD34D',
+      "fillColor": localStorage.getItem("office") == null ? '#180FD3' : '#180FD34D'
     },
     {
       "id": "courtyard",
@@ -62,8 +64,8 @@ function Map() {
       "coords": [
         2197, 766, 2720, 1127
       ],
-      "preFillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75',
-      "fillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B75'
+      "preFillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B4D',
+      "fillColor": localStorage.getItem("courtyard") == null ? '#EDAC1B' : '#EDAC1B4D'
     },
     {
       "id": "blueroom",
@@ -76,8 +78,8 @@ function Map() {
       "coords": [
         2868, 1029, 3039, 1219
       ],
-      "preFillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75',
-      "fillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD75'
+      "preFillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD4D',
+      "fillColor": localStorage.getItem("blueroom") == null ? '#8BAAAD' : '#8BAAAD4D'
     }
   ]
   let navigate = useNavigate();
@@ -88,6 +90,7 @@ function Map() {
   };
 
   const [showExit, setShowExit] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
 
   function clickRoom(room) {
     localStorage.setItem(room.id, room.id)
@@ -100,11 +103,11 @@ function Map() {
       setShowExit(true)
     }
   }, [])
-  
+
   return (
     <div style={{ position: "relative" }}>
 
-      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }} className={showExit ? "overlay" : ""}>
+      <div style={{ position: "absolute", top: 0, left: 0, zIndex: 1 }} className={showExit || showExitModal ? "overlay" : ""}>
         <ImageMapper src={map}
           map={MAP} responsive={true} parentWidth={window.innerWidth}
           onClick={(area) => clickRoom(area)} stayMultiHighlighted={true}
@@ -124,9 +127,35 @@ function Map() {
         </button>
       }
 
+      {showExitModal &&
+        <div className='exit-modal'>
+          <h3> Are you sure you want to exit? </h3>
+          <img src={x} alt='close' className='exit-closeButton' onClick={() => setShowExitModal(false)} />
+          <p> You have not explored: </p>
+          {localStorage.getItem("dutchroom1") == null &&
+            <p>the dutch room</p>
+          }
+          {localStorage.getItem("shortgallery1") == null &&
+            <p>the short gallery</p>
+          }
+          {localStorage.getItem("office") == null &&
+            <p>the office</p>
+          }
+          {localStorage.getItem("courtyard") == null &&
+            <p>the courtyard</p>
+          }
+          {localStorage.getItem("blueroom") == null &&
+            <p>the short gallery</p>
+          }
+          <button className='styledButton' onClick={() => navigate("/exit")}>
+            Exit
+          </button>
+        </div>
+      }
+
       {/* TODO: pop up when you click this with rooms you haven't been to! */}
       {!showExit &&
-        <button className='styledButton exit-button-2' onClick={() => navigate("/exit")}>
+        <button className='styledButton exit-button-2' onClick={() => setShowExitModal(true)}>
           Exit
         </button>
       }

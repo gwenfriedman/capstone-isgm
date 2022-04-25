@@ -43,6 +43,33 @@
   background-size: cover;
 }
 
+.exit-modal {
+  position: fixed;
+  background-color: black;
+  color: white;
+  width: 400px;
+  height: 475px;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.exit-closeButton {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: 350px;
+  margin-top: 20px !important;
+  border-radius: 0;
+}
+
 .exit-button-2 {
   position: absolute;
   z-index: 10;
