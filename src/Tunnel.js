@@ -40,7 +40,7 @@ function Tunnel() {
         </div>
       }
 
-      <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/guardLineup")}>
+      <button className={`styledButton buttonBottom ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/guardLineup")}>
         Help untie the guards
       </button>
     </div>

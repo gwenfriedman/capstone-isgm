@@ -27,6 +27,11 @@
   }
 
   .back {
-    top: 10% !important;
-    width: 50px;
+    top: 5% !important;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    margin-left: 20px;
+    text-decoration: underline;
+    cursor: default;
   }

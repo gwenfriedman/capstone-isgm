@@ -75,8 +75,8 @@ function CourtyardDirector() {
             "that the collection should be crated and shipped to Paris for auction.",
             "and Harvard University would get the proceeds."
           ]}
-            people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", 
-            "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
+            people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley",
+              "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 9000, 7000, 7000, 8000, 5000, 4000]}
             audio={anne1}
             endTime={40000} />
@@ -95,7 +95,7 @@ function CourtyardDirector() {
             "We are a world class musuem, they have to be."
           ]}
             people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley",
-            "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
+              "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
             timeoutDelays={[0, 3000, 10000, 6000, 6000, 6000, 4000, 4000]}
             audio={anne2}
             endTime={41000} />
@@ -133,7 +133,9 @@ function CourtyardDirector() {
         />
       }
 
-      <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
+      <div className='back' onClick={() => navigate("/courtyard")}>
+        <p> return to courtyard </p>
+      </div>
     </div>
 
   )

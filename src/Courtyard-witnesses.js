@@ -97,7 +97,10 @@ function CourtyardWitnesses() {
         </div>
       }
 
-      <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
+      <div className='back' onClick={() => navigate("/courtyard")}>
+        <p> return to courtyard </p>
+      </div>
+
     </div>
 
   )

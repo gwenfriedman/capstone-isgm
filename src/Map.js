@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function Map() {
 
+  //TODO: make fade more extreme
   var mapData = [
     {
       "id": "dutchroom1",
@@ -19,8 +20,8 @@ function Map() {
       "coords": [
         513, 323, 766, 668
       ],
-      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675',
-      "fillColor": localStorage.getItem("dutchroom1") == null ? '#CD8B76' : '#CD8B7675'
+      "preFillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B7666',
+      "fillColor": localStorage.getItem("dutchroom1") == null ? '#cd8b76' : '#CD8B7666'
     },
     {
       "id": "shortgallery1",
@@ -119,6 +120,13 @@ function Map() {
 
       {showExit &&
         <button className='styledButton buttonCenter exitButton' onClick={() => navigate("/exit")}>
+          Exit
+        </button>
+      }
+
+      {/* TODO: pop up when you click this with rooms you haven't been to! */}
+      {!showExit &&
+        <button className='styledButton exit-button-2' onClick={() => navigate("/exit")}>
           Exit
         </button>
       }

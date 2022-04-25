@@ -99,10 +99,10 @@ function Randy() {
                     blockId={"randy"}
                 />
             }
-
-            <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/guardLineup")} />
+            <div className='back' onClick={() => navigate("/guardLineup")}>
+                <p> return to guard lineup </p>
+            </div>
         </div>
-
     )
 }
 

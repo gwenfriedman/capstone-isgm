@@ -92,8 +92,8 @@ function CourtyardFBI() {
             "The chinese artifact is old and somewhat valuable, but not even close to some of the items of art just in that room.",
             "Was it a diversion? Art is easy to smuggle and use as an international currency"
           ]}
-            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", 
-            "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
+            people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker",
+              "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 7000, 5000, 5000, 4000, 5000, 5000, 6000, 4000, 8000, 7000, 8000]}
             audio={baker1}
             endTime={63000} />
@@ -115,7 +115,7 @@ function CourtyardFBI() {
             "Why weren’t they killed? dead men tell no tales"
           ]}
             people={["FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker",
-            "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
+              "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker", "FBI Agent Baker"]}
             timeoutDelays={[0, 6000, 5000, 5000, 7000, 4000, 7000, 5000, 7000, 6000, 5000]}
             audio={baker2}
             endTime={57000} />
@@ -167,7 +167,10 @@ function CourtyardFBI() {
           blockId={"fbi"}
         />
       }
-      <img src={leftArrow} alt="left arrow" className='leftArrow back' onClick={() => navigate("/courtyard")} />
+
+      <div className='back' onClick={() => navigate("/courtyard")}>
+        <p> return to courtyard </p>
+      </div>
     </div>
 
   )

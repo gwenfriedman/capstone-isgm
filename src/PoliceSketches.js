@@ -50,19 +50,7 @@ function PoliceSketches() {
 
         bridge.addEventListener("mousemove", function (e) {
             var brushPos = getBrushPos(e.clientX, e.clientY);
-            var leftBut = detectLeftButton(e);
-            if (leftBut == 1) {
                 drawDot(brushPos.x, brushPos.y);
-            }
-        }, false);
-
-        bridge.addEventListener("touchmove", function (e) {
-            e.preventDefault();
-            var touch = e.targetTouches[0];
-            if (touch) {
-                var brushPos = getBrushPos(touch.pageX, touch.pageY);
-                drawDot(brushPos.x, brushPos.y);
-            }
         }, false);
     }, []);
 
