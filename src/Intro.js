@@ -28,10 +28,10 @@ function Intro() {
   }, [])
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', backgroundColor: "black", height: "100vh"}}>
 
       {showLoadingScreen &&
-      <img src={loading} width={"100%"} style={{backgroundColor: "black"}} />
+        <img className={"loading"} src={loading} width={"50%"} style={{ backgroundColor: "black"}} />
       }
 
       {!showLoadingScreen &&

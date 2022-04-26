@@ -3,18 +3,35 @@ body { margin: 0; }
 #bridge {
 	display: block;
 	margin: 0 auto;
-  background-image: url('./images/sketches-2.png');
-	background-size: cover;
-	width: 1300px;
-	height: 600px;
+  background-image: url('./images/suspect-reveal.png');
+	width: 700px;
+	height: 450px;
+  z-index: 100;
+  background-repeat: no-repeat;
   /* cursor:  crosshair; */
   /* cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png) 53 53, crosshair; */
 }
 
 #bridgeContainer { 
   text-align: center;
-  font-family: Avenir, sans-serif;
+  z-index: 100;
+  display: block;
 }
-#bridgeContainer figcaption {   
-  margin-top: 2rem; 
+
+.police-sketch-page {
+  background-image: url('./images/police-sketches.png');
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sketchButton {
+  margin-top: 300px !important;
+}
+
+.sketch-text {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

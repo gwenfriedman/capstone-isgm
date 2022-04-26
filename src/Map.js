@@ -137,7 +137,7 @@ function Map() {
         <div className='exit-modal'>
           <h3> Are you sure you want to exit? </h3>
           <img src={x} alt='close' className='exit-closeButton' onClick={() => setShowExitModal(false)} />
-          <p> You have not explored: </p>
+          <p style={{textDecoration: "underline"}}> You have not explored: </p>
 
           {localStorage.getItem("dutchroom1") == null &&
             <p>• the dutch room</p>
@@ -152,7 +152,7 @@ function Map() {
             <p>• the courtyard</p>
           }
           {localStorage.getItem("blueroom") == null &&
-            <p>• the short gallery</p>
+            <p>• the blue room </p>
           }
           
           <div className='button-group'>

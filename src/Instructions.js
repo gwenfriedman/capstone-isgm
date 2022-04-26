@@ -11,9 +11,9 @@ function Instructions() {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: '100%', backgroundColor: "black", height: "100vh"}}>
+    <div style={{ width: '100%', backgroundColor: "black", height: "100vh", paddingTop:"50px"}}>
 
-      <img className={"instructions-frame"} src={frame} width="500px" />
+      <img className={"home-frame instructions-frame"} src={frame} width="500px" />
 
       <p className='text-block-instructions'>
         Instructions <br /> <br />

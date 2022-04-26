@@ -39,18 +39,20 @@ function PoliceSketches() {
 
         bridge.addEventListener("mousemove", function (e) {
             var brushPos = getBrushPos(e.clientX, e.clientY);
-                drawDot(brushPos.x, brushPos.y);
+            drawDot(brushPos.x, brushPos.y);
         }, false);
     }, []);
 
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%' }} className={"police-sketch-page"}>
+
+            <p className={"sketch-text"}>Draw to reveal the suspects</p>
 
             <figure id="bridgeContainer">
-                <canvas id="bridge" width="750" height="465"></canvas>
+                <canvas id="bridge" width="700" height="300"></canvas>
             </figure>
 
-            <button className='styledButton buttonCenter' onClick={() => navigate("/map")}>
+            <button className='styledButton buttonCenter sketchButton' onClick={() => navigate("/map")}>
                 Explore the museum
             </button>
 

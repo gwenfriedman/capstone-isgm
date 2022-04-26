@@ -23,6 +23,7 @@ function PhoneCall() {
 
   const [displayButton, setDisplayButton] = useState(false);
   const [answerPhone, setAnswerPhone] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -47,6 +48,7 @@ function PhoneCall() {
       setAnswerPhone(true)
       ring.pause()
       setTimeout(() => setDisplayButton(true), 8000)
+      setShowText(false)
     }
   }
 
@@ -66,7 +68,9 @@ function PhoneCall() {
         onClick={(area) => buttonClicked(area)}
       />
 
-      <p className='phone-text'> click to answer </p>
+      {showText &&
+        <p className='phone-text'> click to answer </p>
+      }
 
       {answerPhone &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>

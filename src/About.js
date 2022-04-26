@@ -26,15 +26,18 @@ function About() {
       <img className={"about-frame-1"} src={frame1} width="650px" />
 
       <p className="about-text-1">
-        The works have an updated value of $500 million and The Museum is offering a $10 million
-        dollar reward for information leading directly to the safe return of the stolen works.
+        Want to know what happened to the paintings? Us too. Nobody has been able to solve the mystery.
+        If you know anything about the works, contact Director of Security Anthony Amore at 617 278 5114
+        or reward@gardnermuseum.org
       </p>
 
       <p className="about-text-2">
-        contact Director of Security Anthony Amore at 617 278 5114 or reward@gardnermuseum.org
+        The works have an updated value of $500 million and The Museum is offering a $10 million dollar reward
+        for information leading directly to the safe return of the stolen works.
       </p>
 
       <img className={"about-carrot"} src={carrot} />
+
 
       {/* view 5 */}
 

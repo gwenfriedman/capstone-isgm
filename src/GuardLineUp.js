@@ -31,11 +31,11 @@ function GuardLineup() {
 
       <div className='guard-buttons'>
         <button className={`styledButton ${(localStorage.getItem("rick") == null) ? "" : "greyOut"}`} onClick={() => clickRick()}>
-          Rick
+          Rick 
         </button>
 
         <button className={`styledButton ${(localStorage.getItem("randy") == null) ? "" : "greyOut"}`} onClick={() => clickRandy()}>
-          Randy
+          Randy (anonymous)
         </button>
       </div>
 
