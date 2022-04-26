@@ -66,6 +66,8 @@ function PhoneCall() {
         onClick={(area) => buttonClicked(area)}
       />
 
+      <p className='phone-text'> click to answer </p>
+
       {answerPhone &&
         <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
           <Captions

@@ -34,8 +34,8 @@ function CallToPolice() {
                     endTime={13000} />
             </div>
 
-            <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/phoneCall")}>
-                Switch to your point of view
+            <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/instructions")}>
+                Start the exploration
             </button>
         </div>
 

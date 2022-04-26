@@ -26,6 +26,7 @@ import Rick from './Rick';
 import Randy from './Randy';
 import PoliceSketches from './PoliceSketches';
 import Office from './Office';
+import Instructions from './Instructions';
 import Exit from './Exit';
 import React from 'react'
 
@@ -83,6 +84,7 @@ function App() {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/intro" element={<Intro />} />
             <Route exact path="/callToPolice" element={<CallToPolice />} />
+            <Route exact path="/instructions" element={<Instructions />} />
             <Route exact path="/phoneCall" element={<PhoneCall />} />
             <Route exact path="/arriveOnScene" element={<ArriveOnScene />} />
             <Route exact path="/insideOffice" element={<InsideOffice />} />

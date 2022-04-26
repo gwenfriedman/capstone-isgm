@@ -45,10 +45,9 @@
 
 .exit-modal {
   position: fixed;
-  background-color: black;
-  color: white;
-  width: 400px;
-  height: 475px;
+  background-color: white;
+  color: black;
+  width: 550px;
   z-index: 2;
   top: 50%;
   left: 50%;
@@ -58,16 +57,28 @@
   display: flex;
   z-index: 100;
   flex-direction: column;
-  padding-left: 50px;
+  text-align: center;
+}
+
+.modal-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .exit-closeButton {
   position: absolute;
   width: 15px;
   height: 15px;
-  margin-left: 350px;
+  margin-left: 500px;
   margin-top: 20px !important;
   border-radius: 0;
+}
+
+.button-group {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-around;
 }
 
 .exit-button-2 {
@@ -89,6 +100,13 @@
 .home-frame {
   position: absolute;
   top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.instructions-frame {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -406,12 +424,25 @@ button {
   right: 30px;
 }
 
+.phone-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
 .buttonCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -20px !important;
   margin-left: -100px !important;
+}
+
+.instructions-button {
+  top: 75% !important;
 }
 
 .buttonBottom {
@@ -436,11 +467,21 @@ button {
   text-align: center;
 }
 
+.text-block-instructions {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
+}
+
 .sub-block {
   color: white;
   position: absolute;
   text-align: center;
-  width: 300px;
+  width: 450px;
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);

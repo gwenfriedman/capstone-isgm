@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import map from './images/map-final.png';
 import mapText from './images/map-text-final.png';
-import x from './images/x.png';
+import x from './images/icons/black-x.png';
 
 import ImageMapper from 'react-img-mapper';
 import { useNavigate } from "react-router-dom";
@@ -112,6 +112,12 @@ function Map() {
           map={MAP} responsive={true} parentWidth={window.innerWidth}
           onClick={(area) => clickRoom(area)} stayMultiHighlighted={true}
           lineWidth={0} />
+
+        {!showExit &&
+          <button className='styledButton exit-button-2' onClick={() => setShowExitModal(true)}>
+            Exit
+          </button>
+        }
       </div>
 
       <img
@@ -132,32 +138,32 @@ function Map() {
           <h3> Are you sure you want to exit? </h3>
           <img src={x} alt='close' className='exit-closeButton' onClick={() => setShowExitModal(false)} />
           <p> You have not explored: </p>
+
           {localStorage.getItem("dutchroom1") == null &&
-            <p>the dutch room</p>
+            <p>• the dutch room</p>
           }
           {localStorage.getItem("shortgallery1") == null &&
-            <p>the short gallery</p>
+            <p>• the short gallery</p>
           }
           {localStorage.getItem("office") == null &&
-            <p>the office</p>
+            <p>• the office</p>
           }
           {localStorage.getItem("courtyard") == null &&
-            <p>the courtyard</p>
+            <p>• the courtyard</p>
           }
           {localStorage.getItem("blueroom") == null &&
-            <p>the short gallery</p>
+            <p>• the short gallery</p>
           }
-          <button className='styledButton' onClick={() => navigate("/exit")}>
-            Exit
-          </button>
+          
+          <div className='button-group'>
+            <button className='styledButton' onClick={() => navigate("/exit")}>
+              Exit the experience
+            </button>
+            <button className='styledButton' onClick={() => setShowExitModal(false)}>
+              Continue exploring
+            </button>
+          </div>
         </div>
-      }
-
-      {/* TODO: pop up when you click this with rooms you haven't been to! */}
-      {!showExit &&
-        <button className='styledButton exit-button-2' onClick={() => setShowExitModal(true)}>
-          Exit
-        </button>
       }
 
     </div>

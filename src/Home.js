@@ -35,7 +35,9 @@ function Home() {
 
 
             <p className='text-block'>
-                A mostly true account of the Isabella Stewart Gardner Museum art heist crime scene.
+            Enter the scene as a boston police detective, look for clues, talk to those involved and
+                experts, and try to solve the mystery.
+                
             </p>
 
             <button className='styledButton buttonCenter' onClick={() => navigate("/intro")}>
@@ -44,8 +46,7 @@ function Home() {
 
 
             <p className='sub-block'>
-                Enter the scene as a boston police detective, look for clues, talk to those involved and
-                experts, and try to solve the mystery.
+            A mostly true account of the Isabella Stewart Gardner Museum art heist crime scene.
             </p>
 
             <a className='about-button' onClick={() => navigate("/about")}>

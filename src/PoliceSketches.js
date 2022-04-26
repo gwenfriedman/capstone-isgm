@@ -21,17 +21,6 @@ function PoliceSketches() {
         bridgeCanvas.fillStyle = 'white';
         bridgeCanvas.fill();
 
-
-        function detectLeftButton(event) {
-            if ('buttons' in event) {
-                return event.buttons === 1;
-            } else if ('which' in event) {
-                return event.which === 1;
-            } else {
-                return event.button === 1;
-            }
-        }
-
         function getBrushPos(xRef, yRef) {
             var bridgeRect = bridge.getBoundingClientRect();
             return {
