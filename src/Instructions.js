@@ -13,7 +13,7 @@ function Instructions() {
   return (
     <div style={{ width: '100%', backgroundColor: "black", height: "100vh", paddingTop:"50px"}}>
 
-      <img className={"home-frame instructions-frame"} src={frame} width="500px" />
+      <img className={"home-frame instructions-frame"} src={frame} width="550px" />
 
       <p className='text-block-instructions'>
         Instructions <br /> <br />

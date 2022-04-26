@@ -44,7 +44,7 @@ function PoliceSketches() {
     }, []);
 
     return (
-        <div style={{ width: '100%' }} className={"police-sketch-page"}>
+        <div style={{ width: '100%', marginTop: "-20px"}} className={"police-sketch-page"}>
 
             <p className={"sketch-text"}>Draw to reveal the suspects</p>
 

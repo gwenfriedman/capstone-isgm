@@ -118,7 +118,7 @@ function Rick() {
                     questions={[
                         "Can you walk us through what happened?",
                         "Do you think any museum employees could be in on this?",
-                        "How were the robbers able to pull this off without triggering any alarms that notify the police?"
+                        "How were the robbers able to pull this off without notifying the police?"
                     ]}
                     functions={[
                         clickedq1, clickedq2, clickedq3

@@ -23,104 +23,111 @@ function About() {
     <div className={"about-page"} style={{ width: '100%' }}>
 
       {/* View 1 */}
-      <img className={"about-frame-1"} src={frame1} width="650px" />
+      <div style={{ height: "100vh" }}>
+        <img className={"about-frame-1"} src={frame1} width="650px" />
 
-      <p className="about-text-1">
-        Want to know what happened to the paintings? Us too. Nobody has been able to solve the mystery.
-        If you know anything about the works, contact Director of Security Anthony Amore at 617 278 5114
-        or reward@gardnermuseum.org
-      </p>
+        <p className="about-text-1">
+          Want to know what happened to the paintings? Us too. Nobody has been able to solve the mystery.
+          If you know anything about the works, contact Director of Security Anthony Amore at 617 278 5114
+          or reward@gardnermuseum.org
+        </p>
 
-      <p className="about-text-2">
-        The works have an updated value of $500 million and The Museum is offering a $10 million dollar reward
-        for information leading directly to the safe return of the stolen works.
-      </p>
+        <p className="about-text-2">
+          The works have an updated value of $500 million and The Museum is offering a $10 million dollar reward
+          for information leading directly to the safe return of the stolen works.
+        </p>
 
-      <img className={"about-carrot"} src={carrot} />
+        <img className={"about-carrot"} src={carrot} />
+      </div>
 
 
       {/* view 5 */}
 
-      <p className='about-text-3'> WHAT THIS IS </p>
+      <div style={{ height: "100vh" }}>
+        <p className='about-text-3'> WHAT THIS IS </p>
 
+        <div className='about-page-desc'>
 
-      <div className='about-page-desc'>
-
-        <p className={"about-paragraph"}>
-          This project began as a desire to create an experience. In hopes of diving into an interdisciplinary
-          project that would combine our specialties, we began searching for a story that could be interactive,
-          decisive and immersive. Right down the street from our apartment, the Isabella Stewart Gardner Museum
-          has been an icon to the city of Boston for many years. In our last year at Northeastern University, an
-          homage to our home for the past five years, this online experience is meant to engage the user deeper
-          into the Isabella Stewart Gardner Museum heist in hopes of adding to the conversation to help bring
-          the works home.
-        </p>
+          <p className={"about-paragraph"}>
+            This project began as a desire to create an experience. In hopes of diving into an interdisciplinary
+            project that would combine our specialties, we began searching for a story that could be interactive,
+            decisive and immersive. Right down the street from our apartment, the Isabella Stewart Gardner Museum
+            has been an icon to the city of Boston for many years. In our last year at Northeastern University, an
+            homage to our home for the past five years, this online experience is meant to engage the user deeper
+            into the Isabella Stewart Gardner Museum heist in hopes of adding to the conversation to help bring
+            the works home.
+          </p>
+        </div>
       </div>
 
       {/* view 4 */}
 
-      <p className='about-text-3'> WHO WE ARE </p>
+      <div style={{ height: "100vh" }}>
+        <p className='about-text-3'> WHO WE ARE </p>
 
-      <div className='frames'>
+        <div className='frames'>
 
-        <div className='bio'>
-          <img className={""} src={gwen} />
-          <p> Gwen Friedman <br /> Developer</p>
-          <p> Senior, Northeastern University <br /> Computer Science + Design </p>
-        </div>
+          <div className='bio'>
+            <img className={""} src={gwen} />
+            <p> Gwen Friedman <br /> Developer</p>
+            <p> Senior, Northeastern University <br /> Computer Science + Design </p>
+          </div>
 
-        <div className='bio'>
-          <img className={""} src={cayla} />
-          <p> Cayla Chow <br /> Designer</p>
-          <p> Senior, Northeastern University <br /> Experience Design </p>
-        </div>
+          <div className='bio'>
+            <img className={""} src={cayla} />
+            <p> Cayla Chow <br /> Designer</p>
+            <p> Senior, Northeastern University <br /> Experience Design </p>
+          </div>
 
-        <div className='bio liam'>
-          <img className={""} src={liam} />
-          <p> Liam Scott <br /> Illustrator</p>
-          <p> Freshman, Northeastern University <br /> Architecture + Design </p>
+          <div className='bio liam'>
+            <img className={""} src={liam} />
+            <p> Liam Scott <br /> Illustrator</p>
+            <p> Freshman, Northeastern University <br /> Architecture + Design </p>
+          </div>
         </div>
       </div>
 
 
       {/* view 2 */}
 
-      <p className='about-text-3'> HUGE THANK YOU TO </p>
+      <div style={{ height: "100vh" }}>
+        <p className='about-text-3'> HUGE THANK YOU TO </p>
 
-      <div className='frames'>
+        <div className='frames'>
 
-        <div className='about-frame-2'>
-          <img className={""} src={frame2} />
-          <p> Netflix <br /> “This is a Robbery”</p>
-        </div>
+          <div className='about-frame-2'>
+            <img className={""} src={frame2} />
+            <p> Netflix <br /> “This is a Robbery”</p>
+          </div>
 
-        <div className='about-frame-3'>
-          <img className={""} src={frame3} />
-          <p> Isabella Stewart <br />
-            Gardner Museum, Boston <br />
-            www.gardnermuseum.org</p>
-        </div>
+          <div className='about-frame-3'>
+            <img className={""} src={frame3} />
+            <p> Isabella Stewart <br />
+              Gardner Museum, Boston <br />
+              www.gardnermuseum.org</p>
+          </div>
 
-        <div className='about-frame-4'>
-          <img className={""} src={frame4} />
-          <p> Liam Scott <br />
-            Illustrator
-            extraordinaire</p>
-        </div>
+          <div className='about-frame-4'>
+            <img className={""} src={frame4} />
+            <p> Liam Scott <br />
+              Illustrator
+              extraordinaire</p>
+          </div>
 
-        <div className='about-frame-5'>
-          <img className={""} src={frame5} />
-          <p> Steven Geofrey <br />
+          <div className='about-frame-5'>
+            <img className={""} src={frame5} />
+            <p> Steven Geofrey <br />
 
-            Mark Sivak <br />
+              Mark Sivak <br />
 
-            For all of your guidance</p>
+              For all of your guidance</p>
+          </div>
         </div>
       </div>
 
       {/* view 3 */}
 
-      <div className='about-page-end'>
+      <div className='about-page-end' style={{ height: "100vh" }}>
         <div className='about-frame-6'>
           <img className={""} src={frame6} />
           <div className={"actors"}>
