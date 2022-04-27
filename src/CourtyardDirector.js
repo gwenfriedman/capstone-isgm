@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import anne from './images/anne.jpg';
 import { useNavigate } from "react-router-dom";
-import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
 import intro from './audio/anne/anne-intro.mp3';

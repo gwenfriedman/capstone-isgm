@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import fbi from './images/baker.png';
+import fbi from './images/baker.jpg';
 import { useNavigate } from "react-router-dom";
-import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
 import intro from './audio/baker/baker-intro.mp3';

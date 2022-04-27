@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import witnesses from './images/witnesses.png';
+import witnesses from './images/witnesses.jpg';
 import { useNavigate } from "react-router-dom";
-import leftArrow from './images/icons/left-arrow.png';
 import QuestionBlock from './QuestionBlock';
 import Captions from './Captions';
 import audio from './audio/witnesses/witnesses.mp3';

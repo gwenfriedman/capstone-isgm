@@ -8,8 +8,7 @@ body { margin: 0; }
 	height: 450px;
   z-index: 100;
   background-repeat: no-repeat;
-  /* cursor:  crosshair; */
-  /* cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png) 53 53, crosshair; */
+  cursor: url('./images/pencil.png'), auto !important;
 }
 
 #bridgeContainer { 
@@ -19,7 +18,7 @@ body { margin: 0; }
 }
 
 .police-sketch-page {
-  background-image: url('./images/police-sketches.png');
+  background-image: url('./images/police-sketches.jpg');
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import courtyard from './images/courtyard.png';
+import courtyard from './images/courtyard.jpg';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Courtyard.json';
 import { useNavigate } from "react-router-dom";

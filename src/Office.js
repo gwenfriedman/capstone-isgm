@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import office from './images/office.png';
+import office from './images/office.jpg';
 import ImageMapper from 'react-img-mapper';
 import myData from './imageMapLocations/Office.json';
 import ArtModal from './ArtModal';

@@ -19,8 +19,8 @@ function Tunnel() {
 
   return (
 
-    <div>
-      <ReactFlashlight>
+    <div className='tunnel-page'>
+      <ReactFlashlight className='tunnel-page' showCursor="true">
         <div>
           <img style={{ width: "100vw" }} src={tunnelImg} alt="guard in tunnel" />
         </div>
