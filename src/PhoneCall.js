@@ -12,7 +12,7 @@ import './generalStyling.css';
 
 function PhoneCall() {
 
-  let ring = new Audio(ringing)
+  let ringAudio = new Audio(ringing)
 
   const MAP = {
     name: 'my-map',
@@ -28,7 +28,6 @@ function PhoneCall() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const [startAudio1, setStartAudio1] = useState(false);
-  const [startAudio2, setStartAudio2] = useState(false);
 
   let audio1 = new Audio(call)
 
@@ -37,14 +36,10 @@ function PhoneCall() {
     console.log("setStartAudio1")
   });
 
-  ring.addEventListener("canplaythrough", event => {
-    setStartAudio2(true)
-    console.log("setStartAudio2")
-  });
-
   useEffect(() => {
-    ring.play()
-    ring.loop = true
+    console.log("ring.play")
+    ringAudio.play()
+    ringAudio.loop = true
 
     function handleResize() {
       setScreenWidth(window.innerWidth)
@@ -54,14 +49,20 @@ function PhoneCall() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      ringAudio.pause()
+      ringAudio.remove()
     };
 
   }, [])
 
   const buttonClicked = (area) => {
     if (area.title === "phone") {
+
+      // todo: why will this not pause?
+      ringAudio.pause()
+      ringAudio.remove()
+      console.log("stop ringing")
       setAnswerPhone(true)
-      ring.pause()
       setTimeout(() => setDisplayButton(true), 8000)
       setShowText(false)
     }
@@ -70,7 +71,7 @@ function PhoneCall() {
   return (
     <div style={{ width: '100%' }}>
 
-      {(startAudio1 && startAudio2) &&
+      {(startAudio1) &&
         <div>
 
           <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/arriveOnScene")}>
