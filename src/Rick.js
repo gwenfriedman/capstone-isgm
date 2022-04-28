@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import pic from './images/rick.png';
 import { useNavigate } from "react-router-dom";
-import leftArrow from './images/icons/left-arrow.png';
 import Captions from './Captions';
 import intro from './audio/rick/rick-intro.mp3';
 import rick2 from './audio/rick/rick2.mp3';

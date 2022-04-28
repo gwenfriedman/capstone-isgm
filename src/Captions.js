@@ -19,6 +19,7 @@ function Captions({ text, people, timeoutDelays, audio, endTime }) {
     audio2.play()
     setTimeout(() => setDisplayCaptions(false), endTime);
     return () => {
+      console.log("unload")
       audio2.pause()
       audio2.currentTime = 0
       audio2.remove()
