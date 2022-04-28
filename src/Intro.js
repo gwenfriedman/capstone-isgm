@@ -20,6 +20,15 @@ function Intro() {
   const [bgImage, setBgImage] = useState(homescreen);
   const [showLoadingScreen, setShowLoadingScreen] = useState(true);
 
+  const [startAudio, setStartAudio] = useState(false);
+
+  let audio1 = new Audio(introAudio)
+
+  audio1.addEventListener("canplaythrough", event => {
+      setStartAudio(true)
+      console.log("setStartAudio true")
+    });
+
   useEffect(() => {
     setTimeout(() => setShowLoadingScreen(false), 2000)
     setTimeout(() => setDisplayButton(true), 72000)
@@ -34,7 +43,7 @@ function Intro() {
         <img className={"loading"} src={loading} width={"50%"} style={{ backgroundColor: "black"}} />
       }
 
-      {!showLoadingScreen &&
+      {!showLoadingScreen && startAudio &&
         <div>
           <div style={{ position: "relative" }} >
             <img src={bgImage} width={"100%"} />
@@ -62,7 +71,7 @@ function Intro() {
               people={["Robber #1", "Rick", "Robber #2", "Rick", "Robber #2", "Rick", "Robber #2", "Rick",
                 "Robber #2", "Rick", "Randy", "Robber #1", "Randy", "Robber #2", "Robber #1", "Robber #2"]}
               timeoutDelays={[0, 6000, 3500, 4000, 8000, 3000, 3000, 2000, 1000, 1500, 7000, 3000, 13000, 2000, 2500, 4500, 9000]}
-              audio={introAudio}
+              audio={audio1}
               endTime={70000} />
           </div>
 

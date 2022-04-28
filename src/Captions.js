@@ -8,21 +8,25 @@ function Captions({ text, people, timeoutDelays, audio, endTime }) {
   const [displayParagraph, setDisplayParagraph] = useState("");
   const [speaker, setSpeaker] = useState("");
 
-  let audio2 = new Audio(audio)
+  // let audio2 = new Audio(audio)
 
   useEffect(() => {
     setTimeout(changeParagraph, timeoutDelays[index]);
   }, [index])
 
   useEffect(() => {
-    audio2.volume = 1
-    audio2.play()
+    // audio2.volume = 1
+    // audio2.play()
+    audio.volume = 1
+    audio.play()
     setTimeout(() => setDisplayCaptions(false), endTime);
     return () => {
-      console.log("unload")
-      audio2.pause()
-      audio2.currentTime = 0
-      audio2.remove()
+      // audio2.pause()
+      // audio2.currentTime = 0
+      // audio2.remove()
+      audio.pause()
+      audio.currentTime = 0
+      audio.remove()
     }
   }, [])
 

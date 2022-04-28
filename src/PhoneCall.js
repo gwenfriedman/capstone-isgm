@@ -27,6 +27,21 @@ function PhoneCall() {
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  const [startAudio1, setStartAudio1] = useState(false);
+  const [startAudio2, setStartAudio2] = useState(false);
+
+  let audio1 = new Audio(call)
+
+  audio1.addEventListener("canplaythrough", event => {
+    setStartAudio1(true)
+    console.log("setStartAudio1")
+  });
+
+  ring.addEventListener("canplaythrough", event => {
+    setStartAudio2(true)
+    console.log("setStartAudio2")
+  });
+
   useEffect(() => {
     ring.play()
     ring.loop = true
@@ -55,37 +70,41 @@ function PhoneCall() {
   return (
     <div style={{ width: '100%' }}>
 
-      <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/arriveOnScene")}>
-        Head to the museum
-      </button>
+      {(startAudio1 && startAudio2) &&
+        <div>
 
-      <ImageMapper
-        src={phone}
-        width={screenWidth}
-        map={MAP}
-        responsive={true}
-        parentWidth={window.innerWidth}
-        onClick={(area) => buttonClicked(area)}
-      />
+          <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/arriveOnScene")}>
+            Head to the museum
+          </button>
 
-      {showText &&
-        <p className='phone-text'> click to answer </p>
-      }
+          <ImageMapper
+            src={phone}
+            width={screenWidth}
+            map={MAP}
+            responsive={true}
+            parentWidth={window.innerWidth}
+            onClick={(area) => buttonClicked(area)}
+          />
 
-      {answerPhone &&
-        <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-          <Captions
-            text={[
-              "I need you to get to the Isabella Stewart Gardner Museum. We just got a call about a robbery. I’m sending another detective to meet you at the scene."
-            ]}
-            people={["Police Chief"]}
-            timeoutDelays={[0, 8000]}
-            audio={call}
-            endTime={8000} />
+          {showText &&
+            <p className='phone-text'> click to answer </p>
+          }
+
+          {answerPhone &&
+            <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+              <Captions
+                text={[
+                  "I need you to get to the Isabella Stewart Gardner Museum. We just got a call about a robbery. I’m sending another detective to meet you at the scene."
+                ]}
+                people={["Police Chief"]}
+                timeoutDelays={[0, 8000]}
+                audio={audio1}
+                endTime={8000} />
+            </div>
+          }
         </div>
       }
     </div>
-
   )
 }
 
