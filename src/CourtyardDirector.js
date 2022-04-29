@@ -109,7 +109,7 @@ function CourtyardDirector() {
               ]}
                 people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley",
                   "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
-                timeoutDelays={[0, 9000, 7000, 7000, 8000, 5000, 4000]}
+                timeoutDelays={[0, 10000, 7000, 7000, 8000, 5000, 4000]}
                 audio={audio2}
                 endTime={40000} />
             </div>
@@ -128,9 +128,9 @@ function CourtyardDirector() {
               ]}
                 people={["Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley",
                   "Museum Director: Anne Hawley", "Museum Director: Anne Hawley", "Museum Director: Anne Hawley"]}
-                timeoutDelays={[0, 3000, 10000, 6000, 6000, 6000, 4000, 4000]}
+                timeoutDelays={[0, 4000, 9000, 7000, 6000, 6000, 6000, 4000]}
                 audio={audio3}
-                endTime={41000} />
+                endTime={43000} />
             </div>
           }
 
@@ -138,7 +138,7 @@ function CourtyardDirector() {
             <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
               <Captions text={[
                 "The collection was insured for everything but unfortunately not for theft.",
-                "We have been focused on installing a climate control system. The building is almost 100 years old, you know.",
+                "We have been focusing on installing a climate control system. The building is almost 100 years old, you know.",
                 "This was really the priority. When it rains clouds form inside the museum because of the moisture.",
                 "Oh and a sewer pipe backed up into one of the galleries. Sewage was coming in the middle of the gallery.",
                 "We don't have time to worry about theft"

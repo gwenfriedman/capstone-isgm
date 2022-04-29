@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from "react-router-dom";
 import call from './audio/intro/phone-call.mp3';
 import ringing from './audio/intro/ringing.mp3';
@@ -12,7 +12,7 @@ import './generalStyling.css';
 
 function PhoneCall() {
 
-  let ringAudio = new Audio(ringing)
+  const ringAudio = useRef(new Audio(ringing));
 
   const MAP = {
     name: 'my-map',
@@ -37,9 +37,8 @@ function PhoneCall() {
   });
 
   useEffect(() => {
-    console.log("ring.play")
-    ringAudio.play()
-    ringAudio.loop = true
+    ringAudio.current.play()
+    ringAudio.current.loop = true
 
     function handleResize() {
       setScreenWidth(window.innerWidth)
@@ -49,19 +48,16 @@ function PhoneCall() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      ringAudio.pause()
-      ringAudio.remove()
+      ringAudio.current.pause()
+      ringAudio.current.remove()
     };
 
   }, [])
 
   const buttonClicked = (area) => {
     if (area.title === "phone") {
-
-      // todo: why will this not pause?
-      ringAudio.pause()
-      ringAudio.remove()
-      console.log("stop ringing")
+      ringAudio.current.pause()
+      ringAudio.current.remove()
       setAnswerPhone(true)
       setTimeout(() => setDisplayButton(true), 8000)
       setShowText(false)

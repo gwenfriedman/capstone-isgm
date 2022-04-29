@@ -12,6 +12,14 @@ function Exit() {
     let navigate = useNavigate();
 
     const [displayButton, setDisplayButton] = useState(false);
+    const [startAudio1, setStartAudio1] = useState(false);
+
+    let audio1 = new Audio(exitAudio)
+
+    audio1.addEventListener("canplaythrough", event => {
+        setStartAudio1(true)
+        console.log("setStartAudio1")
+    });
 
     useEffect(() => {
         setTimeout(() => setDisplayButton(true), 10000)
@@ -20,24 +28,29 @@ function Exit() {
     return (
         <div style={{ width: '100%' }}>
 
-            <div style={{ position: "relative" }} >
-                <img src={pic} width={"100%"} />
-            </div>
+            {startAudio1 &&
+                <div>
 
-            <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
-                <Captions
-                    text={[
-                        "This is a tough one. Let's head back to the station to look into some suspects. Those paintings are going to disappear fast."
-                    ]}
-                    people={["Detective Willard"]}
-                    timeoutDelays={[0, 10000]}
-                    audio={exitAudio}
-                    endTime={10000} />
-            </div>
+                    <div style={{ position: "relative" }} >
+                        <img src={pic} width={"100%"} />
+                    </div>
 
-            <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/about")}>
-              Return to station
-            </button>
+                    <div className={"caption-container"} style={{ position: "absolute", bottom: 10, left: 50 }}>
+                        <Captions
+                            text={[
+                                "This is a tough one. Let's head back to the station to look into some suspects. Those paintings are going to disappear fast."
+                            ]}
+                            people={["Detective Willard"]}
+                            timeoutDelays={[0, 10000]}
+                            audio={audio1}
+                            endTime={10000} />
+                    </div>
+
+                    <button className={`styledButton buttonCenter ${displayButton ? "buttonTransition" : "buttonHide"}`} onClick={() => navigate("/about")}>
+                        Return to station
+                    </button>
+                </div>
+            }
         </div>
 
     )
