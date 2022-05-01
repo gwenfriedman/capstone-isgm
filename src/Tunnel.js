@@ -28,7 +28,7 @@ function Tunnel() {
 
   return (
 
-    <div className='tunnel-page'>
+    <div style={{backgroundColor: 'black'}} className='tunnel-page'>
 
       {startAudio &&
         <div>

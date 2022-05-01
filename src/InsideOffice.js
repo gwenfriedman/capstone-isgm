@@ -26,7 +26,7 @@ function InsideOffice() {
     }, [])
 
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%', backgroundColor: 'black'}}>
             {startAudio1 &&
                 <div>
 
@@ -47,7 +47,7 @@ function InsideOffice() {
                             ]}
                             people={["Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn", "Chief of Security: Charles Heidorn",
                                 "Detective Willard", "Chief of Security: Charles Heidorn", "Detective Willard"]}
-                            timeoutDelays={[0, 11500, 9500, 7500, 3500, 4500, 7000, 3000]}
+                            timeoutDelays={[0, 11500, 9500, 7500, 3500, 4500, 7000, 3500]}
                             audio={audio1} endTime={47000} />
                     </div>
 

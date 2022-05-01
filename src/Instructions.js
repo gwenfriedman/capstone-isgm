@@ -11,24 +11,26 @@ function Instructions() {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: '100%', backgroundColor: "black", height: "100vh", paddingTop:"50px"}}>
+    <div style={{ width: '100%', backgroundColor: "black", height: "100vh", paddingTop: "50px" }}>
 
       <img className={"home-frame instructions-frame"} src={frame} width="550px" />
 
-      <p className='text-block-instructions'>
-        Instructions <br /> <br />
-        It’s March of 1990, the Isabella Stewart Gardner Museum has just been robbed.
-        Enter the scene as a Boston detective as one of the first on the scene. <br /> <br />
+      <div className='instruction-content'>
+        <p>
+          Instructions <br /> <br />
+          It’s March of 1990, the Isabella Stewart Gardner Museum has just been robbed.
+          Enter the scene as a Boston detective as one of the first on the scene. <br /> <br />
 
-        1. Talk to experts and witnesses to learn more about the robbers and art. <br />
-        2. Explore the rooms and discover the missing paintings<br />
-        3. Gather evidence to learn more about the crime<br />
+          1. Talk to experts and witnesses to learn more about the robbers and art. <br />
+          2. Explore the rooms and discover the missing paintings<br />
+          3. Gather evidence to learn more about the crime<br />
 
-      </p>
+        </p>
 
-      <button className='styledButton buttonCenter instructions-button' onClick={() => navigate("/phoneCall")}>
-        Let's go!
-      </button>
+        <button className='styledButton instruction-button' onClick={() => navigate("/phoneCall")}>
+          Let's go!
+        </button>
+      </div>
 
     </div>
 

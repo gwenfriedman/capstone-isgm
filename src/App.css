@@ -394,8 +394,6 @@ button {
 .about-page-button {
   display: block;
   margin: auto;
-  /* margin-top: -100px !important; */
-  /* margin-bottom: 100px !important; */
 }
 
 @media only screen and (min-width: 1300px) {
@@ -455,7 +453,7 @@ button {
 }
 
 .instructions-button {
-  top: 75% !important;
+  top: 70% !important;
 }
 
 .buttonBottom {
@@ -470,6 +468,23 @@ button {
   opacity: 0.5;
 }
 
+.instruction-content {
+  display: flex !important;
+  flex-direction: column !important;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
+}
+
+.instruction-button {
+  margin: auto;
+  margin-top: 30px;
+}
+
 .text-block {
   color: white;
   position: absolute;
@@ -477,16 +492,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
-  text-align: center;
-}
-
-.text-block-instructions {
-  color: white;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
   text-align: center;
 }
 

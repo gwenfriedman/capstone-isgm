@@ -65,7 +65,7 @@ function PhoneCall() {
   }
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', backgroundColor: 'black'}}>
 
       {(startAudio1) &&
         <div>

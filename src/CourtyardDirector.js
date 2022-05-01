@@ -78,7 +78,7 @@ function CourtyardDirector() {
   let navigate = useNavigate();
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', backgroundColor: 'black'}}>
 
       {(startAudio1 && startAudio2 && startAudio3 && startAudio4) &&
         <div>
