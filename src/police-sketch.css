@@ -4,8 +4,8 @@ body { margin: 0; }
 	display: block;
 	margin: 0 auto;
   background-image: url('./images/suspect-reveal.png');
-	width: 50vw;
-	height: 30vw;
+	width: 52vw;
+	height: 58vh;
   z-index: 100;
   background-repeat: no-repeat;
   cursor: url('./images/pencil.png'), auto !important;
