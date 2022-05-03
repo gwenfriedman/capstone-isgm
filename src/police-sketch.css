@@ -4,10 +4,11 @@ body { margin: 0; }
 	display: block;
 	margin: 0 auto;
   background-image: url('./images/suspect-reveal.png');
-	width: 52vw;
-	height: 58vh;
+	width: 52vw !important;
+	height: 58vh !important;
   z-index: 100;
   background-repeat: no-repeat;
+  background-size: 52vw 58vh;
   cursor: url('./images/pencil.png'), auto !important;
 }
 
