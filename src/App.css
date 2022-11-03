@@ -466,6 +466,7 @@ button {
 
 .overlay {
   opacity: 0.5;
+  background-color: white !important;
 }
 
 .instruction-content {

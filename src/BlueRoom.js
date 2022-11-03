@@ -106,7 +106,7 @@ function BlueRoom() {
 
   return (
 
-    <div style={{ width: '100%', backgroundColor: 'black'}}>
+    <div style={{ width: '100%', backgroundColor: 'white'}}>
       {(startAudio1 && startAudio2 && startAudio3) &&
         <div>
 

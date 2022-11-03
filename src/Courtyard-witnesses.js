@@ -68,7 +68,7 @@ function CourtyardWitnesses() {
           </div>
 
           {showQuestions &&
-            <QuestionBlock title={"What would you like to ask FBI Agent Baker?"}
+            <QuestionBlock title={"What would you like to ask the witnesses?"}
               questions={[
                 "What did you see the night of the robbery?",
                 "Do the police sketches look like the men you saw?"

@@ -75,7 +75,7 @@ function DutchRoom2() {
     }, []);
 
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%', backgroundColor: "white"}}>
 
             {showLadyAndGentModal ?
                 <ArtModal

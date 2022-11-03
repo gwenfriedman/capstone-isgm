@@ -63,7 +63,7 @@ function DutchRoom4() {
     }, []);
 
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%', backgroundColor: "white"}}>
 
             {showObeliskModal ?
                 <ArtModal

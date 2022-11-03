@@ -51,7 +51,7 @@ function Office() {
   }, []);
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%', backgroundColor: "white" }}>
 
       {showChezTortoniModal ?
         <ArtModal
